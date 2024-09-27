@@ -56,56 +56,56 @@ UART_HandleTypeDef huart3;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
+/* Definitions for ProcessTask1 */
+osThreadId_t ProcessTask1Handle;
+const osThreadAttr_t ProcessTask1_attributes = {
+  .name = "ProcessTask1",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for myTask01 */
-osThreadId_t myTask01Handle;
-const osThreadAttr_t myTask01_attributes = {
-  .name = "myTask01",
+/* Definitions for Task1 */
+osThreadId_t Task1Handle;
+const osThreadAttr_t Task1_attributes = {
+  .name = "Task1",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for myTask02 */
-osThreadId_t myTask02Handle;
-const osThreadAttr_t myTask02_attributes = {
-  .name = "myTask02",
+/* Definitions for Task2 */
+osThreadId_t Task2Handle;
+const osThreadAttr_t Task2_attributes = {
+  .name = "Task2",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for myQueue01 */
-osMessageQueueId_t myQueue01Handle;
-const osMessageQueueAttr_t myQueue01_attributes = {
-  .name = "myQueue01"
+/* Definitions for MessageQueue */
+osMessageQueueId_t MessageQueueHandle;
+const osMessageQueueAttr_t MessageQueue_attributes = {
+  .name = "MessageQueue"
 };
-/* Definitions for myTimer01 */
-osTimerId_t myTimer01Handle;
-const osTimerAttr_t myTimer01_attributes = {
-  .name = "myTimer01"
+/* Definitions for DefaultTimer */
+osTimerId_t DefaultTimerHandle;
+const osTimerAttr_t DefaultTimer_attributes = {
+  .name = "DefaultTimer"
 };
 /* Definitions for ButtonTimer */
 osTimerId_t ButtonTimerHandle;
 const osTimerAttr_t ButtonTimer_attributes = {
   .name = "ButtonTimer"
 };
-/* Definitions for myMutex01 */
-osMutexId_t myMutex01Handle;
-const osMutexAttr_t myMutex01_attributes = {
-  .name = "myMutex01"
+/* Definitions for MutexTask */
+osMutexId_t MutexTaskHandle;
+const osMutexAttr_t MutexTask_attributes = {
+  .name = "MutexTask"
 };
-/* Definitions for myBinarySem01 */
-osSemaphoreId_t myBinarySem01Handle;
-const osSemaphoreAttr_t myBinarySem01_attributes = {
-  .name = "myBinarySem01"
+/* Definitions for BinarySem01 */
+osSemaphoreId_t BinarySem01Handle;
+const osSemaphoreAttr_t BinarySem01_attributes = {
+  .name = "BinarySem01"
 };
-/* Definitions for myBinarySem02 */
-osSemaphoreId_t myBinarySem02Handle;
-const osSemaphoreAttr_t myBinarySem02_attributes = {
-  .name = "myBinarySem02"
+/* Definitions for BinarySem02 */
+osSemaphoreId_t BinarySem02Handle;
+const osSemaphoreAttr_t BinarySem02_attributes = {
+  .name = "BinarySem02"
 };
 /* USER CODE BEGIN PV */
 
@@ -122,10 +122,10 @@ static void MX_USART1_UART_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
 static void MX_TIM6_Init(void);
-void StartDefaultTask(void *argument);
-void StartTask01(void *argument);
-void StartTask02(void *argument);
-void Callback01(void *argument);
+void StartProcessTask1(void *argument);
+void StartTask1(void *argument);
+void StartTask2(void *argument);
+void DefaultTimerCallback(void *argument);
 void TimerCallback(void *argument);
 
 /* USER CODE BEGIN PFP */
@@ -181,54 +181,54 @@ int main(void)
   /* Init scheduler */
   osKernelInitialize();
   /* Create the mutex(es) */
-  /* creation of myMutex01 */
-  myMutex01Handle = osMutexNew(&myMutex01_attributes);
+  /* creation of MutexTask */
+  MutexTaskHandle = osMutexNew(&MutexTask_attributes);
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* Create the semaphores(s) */
-  /* creation of myBinarySem01 */
-  myBinarySem01Handle = osSemaphoreNew(1, 0, &myBinarySem01_attributes);
+  /* creation of BinarySem01 */
+  BinarySem01Handle = osSemaphoreNew(1, 0, &BinarySem01_attributes);
 
-  /* creation of myBinarySem02 */
-  myBinarySem02Handle = osSemaphoreNew(1, 1, &myBinarySem02_attributes);
+  /* creation of BinarySem02 */
+  BinarySem02Handle = osSemaphoreNew(1, 1, &BinarySem02_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* Create the timer(s) */
-  /* creation of myTimer01 */
-  myTimer01Handle = osTimerNew(Callback01, osTimerPeriodic, NULL, &myTimer01_attributes);
+  /* creation of DefaultTimer */
+  DefaultTimerHandle = osTimerNew(DefaultTimerCallback, osTimerPeriodic, NULL, &DefaultTimer_attributes);
 
   /* creation of ButtonTimer */
   ButtonTimerHandle = osTimerNew(TimerCallback, osTimerOnce, NULL, &ButtonTimer_attributes);
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
-  osTimerStart(myTimer01Handle, 10000U);
+  osTimerStart(DefaultTimerHandle, 10000U);
 //  osTimerDelete(myTimer01Handle);
   /* USER CODE END RTOS_TIMERS */
 
   /* Create the queue(s) */
-  /* creation of myQueue01 */
-  myQueue01Handle = osMessageQueueNew (16, sizeof(uint16_t), &myQueue01_attributes);
+  /* creation of MessageQueue */
+  MessageQueueHandle = osMessageQueueNew (1, sizeof(uint16_t), &MessageQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  /* creation of ProcessTask1 */
+  ProcessTask1Handle = osThreadNew(StartProcessTask1, NULL, &ProcessTask1_attributes);
 
-  /* creation of myTask01 */
-  myTask01Handle = osThreadNew(StartTask01, NULL, &myTask01_attributes);
+  /* creation of Task1 */
+  Task1Handle = osThreadNew(StartTask1, NULL, &Task1_attributes);
 
-  /* creation of myTask02 */
-  myTask02Handle = osThreadNew(StartTask02, NULL, &myTask02_attributes);
+  /* creation of Task2 */
+  Task2Handle = osThreadNew(StartTask2, NULL, &Task2_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -817,12 +817,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		// falling
 		if (HAL_GPIO_ReadPin(GPIOC, BUTTON_EXTI13_Pin) == GPIO_PIN_RESET)
 		{
-			osThreadFlagsSet(defaultTaskHandle, 0x01);
+			osThreadFlagsSet(ProcessTask1Handle, 0x01);
 		}
 		// rising
 		else
 		{
-			osThreadFlagsSet(defaultTaskHandle, 0x02);
+			osThreadFlagsSet(ProcessTask1Handle, 0x02);
 		}
 		break;
 	default:
@@ -831,14 +831,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 }
 /* USER CODE END 4 */
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header_StartProcessTask1 */
 /**
-  * @brief  Function implementing the defaultTask thread.
+  * @brief  Function implementing the ProcessTask1 thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
+/* USER CODE END Header_StartProcessTask1 */
+void StartProcessTask1(void *argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
@@ -854,36 +854,36 @@ void StartDefaultTask(void *argument)
 		  // not exceed 1s
 		  osTimerStop(ButtonTimerHandle);
 		  msg = 0;
-		  osMessageQueuePut(myQueue01Handle, &msg, 0, 0);
+		  osMessageQueuePut(MessageQueueHandle, &msg, 0, 0);
 	  }
 	  else
 	  {
 		  // exceed 1s
 		  msg = 1;
-		  osMessageQueuePut(myQueue01Handle, &msg, 0, 0);
+		  osMessageQueuePut(MessageQueueHandle, &msg, 0, 0);
 //		  osThreadFlagsWait(0x02, osFlagsWaitAny, osWaitForever);
 	  }
   }
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask01 */
+/* USER CODE BEGIN Header_StartTask1 */
 /**
-* @brief Function implementing the myTask01 thread.
+* @brief Function implementing the Task1 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask01 */
-void StartTask01(void *argument)
+/* USER CODE END Header_StartTask1 */
+void StartTask1(void *argument)
 {
-  /* USER CODE BEGIN StartTask01 */
+  /* USER CODE BEGIN StartTask1 */
   /* Infinite loop */
   uint16_t msg;
   for(;;)
   {
-	osMessageQueueGet(myQueue01Handle, &msg, NULL, osWaitForever);
+	osMessageQueueGet(MessageQueueHandle, &msg, NULL, osWaitForever);
 //	osSemaphoreAcquire(myBinarySem01Handle, osWaitForever);
-	osMutexAcquire(myMutex01Handle, osWaitForever);
+	osMutexAcquire(MutexTaskHandle, osWaitForever);
 	if (msg == 0)
 	{
 		// not exceed 1s
@@ -912,27 +912,26 @@ void StartTask01(void *argument)
 			}
 		}
 	}
-	osMutexRelease(myMutex01Handle);
+	osMutexRelease(MutexTaskHandle);
   }
-  /* USER CODE END StartTask01 */
+  /* USER CODE END StartTask1 */
 }
 
-/* USER CODE BEGIN Header_StartTask02 */
+/* USER CODE BEGIN Header_StartTask2 */
 /**
-* @brief Function implementing the myTask01 thread.
+* @brief Function implementing the Task2 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void *argument)
+/* USER CODE END Header_StartTask2 */
+void StartTask2(void *argument)
 {
-  /* USER CODE BEGIN StartTask02 */
+  /* USER CODE BEGIN StartTask2 */
   /* Infinite loop */
   for(;;)
   {
-
-	osSemaphoreAcquire(myBinarySem02Handle, osWaitForever);
-	osMutexAcquire(myMutex01Handle, osWaitForever);
+	osSemaphoreAcquire(BinarySem02Handle, osWaitForever);
+	osMutexAcquire(MutexTaskHandle, osWaitForever);
 	int i=0;
 	for (i=0;i<2;i++)
 	{
@@ -943,17 +942,17 @@ void StartTask02(void *argument)
 			osDelay(50);
 		}
 	}
-	osMutexRelease(myMutex01Handle);
+	osMutexRelease(MutexTaskHandle);
   }
-  /* USER CODE END StartTask02 */
+  /* USER CODE END StartTask2 */
 }
 
-/* Callback01 function */
-void Callback01(void *argument)
+/* DefaultTimerCallback function */
+void DefaultTimerCallback(void *argument)
 {
-  /* USER CODE BEGIN Callback01 */
-  osSemaphoreRelease(myBinarySem02Handle);
-  /* USER CODE END Callback01 */
+  /* USER CODE BEGIN DefaultTimerCallback */
+	osSemaphoreRelease(BinarySem02Handle);
+  /* USER CODE END DefaultTimerCallback */
 }
 
 /* TimerCallback function */
@@ -962,7 +961,7 @@ void TimerCallback(void *argument)
   /* USER CODE BEGIN TimerCallback */
 //  HAL_GPIO_TogglePin(GPIOB, LED2_Pin);
 //  osSemaphoreRelease(myBinarySem01Handle);
-	osThreadFlagsSet(defaultTaskHandle, 0x04);
+	osThreadFlagsSet(ProcessTask1Handle, 0x04);
   /* USER CODE END TimerCallback */
 }
 

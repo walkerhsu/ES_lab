@@ -10,9 +10,9 @@
 ../Core/Src/main.c:589:13:MX_USB_OTG_FS_PCD_Init	2
 ../Core/Src/main.c:624:13:MX_GPIO_Init	1
 ../Core/Src/main.c:811:6:HAL_GPIO_EXTI_Callback	3
-../Core/Src/main.c:841:6:StartDefaultTask	2
-../Core/Src/main.c:880:6:StartTask01	7
-../Core/Src/main.c:930:6:StartTask02	3
-../Core/Src/main.c:955:6:Callback01	1
-../Core/Src/main.c:963:6:TimerCallback	1
-../Core/Src/main.c:976:6:Error_Handler	1
+../Core/Src/main.c:841:6:StartProcessTask1	2
+../Core/Src/main.c:877:6:StartTask1	7
+../Core/Src/main.c:927:6:StartTask2	3
+../Core/Src/main.c:951:6:DefaultTimerCallback	1
+../Core/Src/main.c:959:6:TimerCallback	1
+../Core/Src/main.c:972:6:Error_Handler	1
