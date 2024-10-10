@@ -104,3 +104,15 @@ java.io.FileNotFoundException: /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM3
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-10-10 11:22:03.212
 !MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-10-10 13:09:34.289
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 38 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-10-10 13:09:34.296
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-10-10 13:09:34.303
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 38 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-10-10 13:09:34.308
+!MESSAGE Existing sessions are:
