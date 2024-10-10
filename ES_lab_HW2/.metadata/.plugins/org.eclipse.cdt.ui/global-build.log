@@ -1,0 +1,1525 @@
+01:01:42 **** Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi_ex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_uart_ex.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/CMSIS/system_stm32l4xx.d" -MT"Drivers/CMSIS/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/CMSIS/system_stm32l4xx.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl/lsm6dsl.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/Components/lsm6dsl/lsm6dsl.d" -MT"Drivers/BSP/Components/lsm6dsl/lsm6dsl.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/Components/lsm6dsl/lsm6dsl.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01.d" -MT"Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_accelero.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_accelero.d" -MT"Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_accelero.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_accelero.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/Common/Src/es_wifi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/WIFI/es_wifi.d" -MT"Application/WIFI/es_wifi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/WIFI/es_wifi.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/Common/Src/es_wifi_io.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/WIFI/es_wifi_io.d" -MT"Application/WIFI/es_wifi_io.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/WIFI/es_wifi_io.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/Common/Src/wifi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/WIFI/wifi.d" -MT"Application/WIFI/wifi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/WIFI/wifi.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/stm32l4xx_it.d" -MT"Application/User/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Application/User/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/syscalls.d" -MT"Application/User/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/syscalls.o"
+arm-none-eabi-gcc "../Application/User/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/sysmem.d" -MT"Application/User/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/sysmem.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:196:51: error: 'data' undeclared (first use in this function); did you mean 'TxData'?
+  196 |         uint8_t* TxData = convert_int16_to_string(data, 3); // Convert data to string
+      |                                                   ^~~~
+      |                                                   TxData
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:196:51: note: each undeclared identifier is reported only once for each function it appears in
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:52: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         ret = WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                                    ^~~~~~
+      |                                                    |
+      |                                                    uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+make: *** [Application/User/subdir.mk:28: Application/User/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+01:02:25 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Application/Startup/startup_stm32l475vgtx.d" -MT"Application/Startup/startup_stm32l475vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/Startup/startup_stm32l475vgtx.o" "../Application/Startup/startup_stm32l475vgtx.s"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:52: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         ret = WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                                    ^~~~~~
+      |                                                    |
+      |                                                    uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  55396	    540	  97724	 153660	  2583c	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:02:37 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55396	    540	  97724	 153660	  2583c	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+01:03:27 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:52: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         ret = WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                                    ^~~~~~
+      |                                                    |
+      |                                                    uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54340	    540	  97220	 152100	  25224	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:04:09 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54324	    540	  97220	 152084	  25214	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:05:20 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:9: warning: implicit declaration of function 'osDelay' [-Wimplicit-function-declaration]
+  198 |         osDelay(500);
+      |         ^~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: ./Application/User/main.o: in function `main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198: undefined reference to `osDelay'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:68: WiFi_Client_Server.elf] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+01:07:58 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54324	    540	  97220	 152084	  25214	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:16:22 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54324	    536	  97224	 152084	  25214	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:20:34 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54316	    536	  97224	 152076	  2520c	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:20:59 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54308	    536	  97224	 152068	  25204	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:21:23 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54308	    536	  97224	 152068	  25204	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:21:54 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    536	  97224	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:25:24 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54308	    540	  97220	 152068	  25204	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:26:17 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54324	    540	  97220	 152084	  25214	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:31:26 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54308	    540	  97220	 152068	  25204	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:43:19 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  197 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  359 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:359:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:50:46 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+01:54:24 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:84:11: error: redefinition of 'Trials'
+   84 |   int16_t Trials = 1;
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:83:11: note: previous definition of 'Trials' with type 'int16_t' {aka 'short int'}
+   83 |   int16_t Trials = CONNECTION_TRIAL_MAX;
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+make: *** [Application/User/subdir.mk:28: Application/User/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+01:54:48 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+01:56:51 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:05:09 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:15:51 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:20:54 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:29:23: error: too many decimal points in number
+   29 | uint8_t RemoteIP[] = {0.0.0.0};
+      |                       ^~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+make: *** [Application/User/subdir.mk:28: Application/User/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:21:12 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    536	  97224	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:21:41 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54300	    536	  97224	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+11:21:55 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    536	  97224	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:24:56 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:26:30 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:199:9: warning: implicit declaration of function 'osDelay' [-Wimplicit-function-declaration]
+  199 |         osDelay(1000);
+      |         ^~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:361:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  361 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:361:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  361 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:361:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: ./Application/User/main.o: in function `main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:199: undefined reference to `osDelay'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:68: WiFi_Client_Server.elf] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:28:05 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:198:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  198 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:82:11: warning: unused variable 'ret' [-Wunused-variable]
+   82 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:79:11: warning: unused variable 'TxData' [-Wunused-variable]
+   79 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  360 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:360:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54300	    540	  97220	 152060	  251fc	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:33:01 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197:32: warning: implicit declaration of function 'osKernelSysTick' [-Wimplicit-function-declaration]
+  197 |         uint32_t currentTime = osKernelSysTick(); // or another function to get current time
+      |                                ^~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:201:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  201 |           WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                                ^~~~~~
+      |                                                |
+      |                                                uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:83:11: warning: unused variable 'ret' [-Wunused-variable]
+   83 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:80:11: warning: unused variable 'TxData' [-Wunused-variable]
+   80 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:367:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  367 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | 
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:367:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  367 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:367:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:48:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   48 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: ./Application/User/main.o: in function `main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:197: undefined reference to `osKernelSysTick'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:68: WiFi_Client_Server.elf] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:39:09 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:10: fatal error: cmsis_os.h: No such file or directory
+   20 | #include "cmsis_os.h"
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [Application/User/subdir.mk:28: Application/User/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:39:24 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:200:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  200 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:194:12: warning: unused variable 'lastSendTime' [-Wunused-variable]
+  194 |   uint32_t lastSendTime = 0; // Time when the last send occurred
+      |            ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:83:11: warning: unused variable 'ret' [-Wunused-variable]
+   83 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:80:11: warning: unused variable 'TxData' [-Wunused-variable]
+   80 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:365:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  365 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | /* Private defines -----------------------------------------------------------*/
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:365:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  365 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:365:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+11:40:10 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:200:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  200 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:194:12: warning: unused variable 'lastSendTime' [-Wunused-variable]
+  194 |   uint32_t lastSendTime = 0; // Time when the last send occurred
+      |            ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:83:11: warning: unused variable 'ret' [-Wunused-variable]
+   83 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:80:11: warning: unused variable 'TxData' [-Wunused-variable]
+   80 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:365:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  365 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | /* Private defines -----------------------------------------------------------*/
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:365:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  365 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:365:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+arm-none-eabi-gcc -o "WiFi_Client_Server.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/STM32CubeIDE/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WiFi_Client_Server.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: WiFi_Client_Server.elf
+ 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+arm-none-eabi-objdump -h -S WiFi_Client_Server.elf  > "WiFi_Client_Server.list"
+   text	   data	    bss	    dec	    hex	filename
+  54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+Finished building: WiFi_Client_Server.list
+ 
+12:25:18 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/stm32l4xx_it.d" -MT"Application/User/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/stm32l4xx_it.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:88:3: error: unknown type name 'LSM6DSL_Object_t'
+   88 |   LSM6DSL_Object_t LSM6DSL_Sensor;
+      |   ^~~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:205:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  205 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:199:12: warning: unused variable 'lastSendTime' [-Wunused-variable]
+  199 |   uint32_t lastSendTime = 0; // Time when the last send occurred
+      |            ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:88:20: warning: unused variable 'LSM6DSL_Sensor' [-Wunused-variable]
+   88 |   LSM6DSL_Object_t LSM6DSL_Sensor;
+      |                    ^~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:84:11: warning: unused variable 'ret' [-Wunused-variable]
+   84 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:81:11: warning: unused variable 'TxData' [-Wunused-variable]
+   81 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:370:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  370 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | /* Private defines -----------------------------------------------------------*/
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:370:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  370 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:370:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'LSM6DSL_Init':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:23: error: 'LSM6DSL_Sensor' undeclared (first use in this function); did you mean 'LSM6DSL_Init'?
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |                       ^~~~~~~~~~~~~~
+      |                       LSM6DSL_Init
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:23: note: each undeclared identifier is reported only once for each function it appears in
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:9: error: too many arguments to function 'LSM6DSL_Init'
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |         ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:400:6: note: declared here
+  400 | void LSM6DSL_Init(void)
+      |      ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:42: error: 'BSP_ERROR_NONE' undeclared (first use in this function); did you mean 'FLASH_ERROR_NONE'?
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |                                          ^~~~~~~~~~~~~~
+      |                                          FLASH_ERROR_NONE
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:9: error: void value not ignored as it ought to be
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:410:9: warning: implicit declaration of function 'LSM6DSL_ACC_Enable_Significant_Motion_Detection' [-Wimplicit-function-declaration]
+  410 |     if (LSM6DSL_ACC_Enable_Significant_Motion_Detection(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+make: *** [Application/User/subdir.mk:28: Application/User/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j7 all" terminated with exit code 2. Build might be incomplete.

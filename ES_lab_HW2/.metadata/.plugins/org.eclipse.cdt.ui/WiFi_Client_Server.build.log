@@ -1,0 +1,76 @@
+12:25:18 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc "/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DUSE_STM32L475E_IOT01 -DSTM32L475xx -c -I../../Inc -I../../../Common/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/B-L475E-IOT01 -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/Common -I/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Drivers/BSP/Components/lsm6dsl -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/stm32l4xx_it.d" -MT"Application/User/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/stm32l4xx_it.o"
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'main':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:88:3: error: unknown type name 'LSM6DSL_Object_t'
+   88 |   LSM6DSL_Object_t LSM6DSL_Sensor;
+      |   ^~~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:205:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  205 |         WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
+      |                                              ^~~~~~
+      |                                              |
+      |                                              uint8_t * {aka unsigned char *}
+In file included from ../../../Common/Inc/es_wifi.h:28,
+                 from ../../../Common/Inc/wifi.h:26,
+                 from ../../Inc/main.h:24,
+                 from /Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:19:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.200.202406191456/tools/arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:199:12: warning: unused variable 'lastSendTime' [-Wunused-variable]
+  199 |   uint32_t lastSendTime = 0; // Time when the last send occurred
+      |            ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:88:20: warning: unused variable 'LSM6DSL_Sensor' [-Wunused-variable]
+   88 |   LSM6DSL_Object_t LSM6DSL_Sensor;
+      |                    ^~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:84:11: warning: unused variable 'ret' [-Wunused-variable]
+   84 |   int32_t ret;
+      |           ^~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:81:11: warning: unused variable 'TxData' [-Wunused-variable]
+   81 |   uint8_t TxData[] = "STM32 : Hello!\n";
+      |           ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'convert_int16_to_string':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:370:33: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  370 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:20:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   19 | #include "main.h"
+  +++ |+#include <stdlib.h>
+   20 | /* Private defines -----------------------------------------------------------*/
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:370:33: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+  370 |     uint8_t* output = (uint8_t*)malloc(needed_size);
+      |                                 ^~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:370:33: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: In function 'LSM6DSL_Init':
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:23: error: 'LSM6DSL_Sensor' undeclared (first use in this function); did you mean 'LSM6DSL_Init'?
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |                       ^~~~~~~~~~~~~~
+      |                       LSM6DSL_Init
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:23: note: each undeclared identifier is reported only once for each function it appears in
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:9: error: too many arguments to function 'LSM6DSL_Init'
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |         ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:400:6: note: declared here
+  400 | void LSM6DSL_Init(void)
+      |      ^~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:42: error: 'BSP_ERROR_NONE' undeclared (first use in this function); did you mean 'FLASH_ERROR_NONE'?
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |                                          ^~~~~~~~~~~~~~
+      |                                          FLASH_ERROR_NONE
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:403:9: error: void value not ignored as it ought to be
+  403 |     if (LSM6DSL_Init(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:410:9: warning: implicit declaration of function 'LSM6DSL_ACC_Enable_Significant_Motion_Detection' [-Wimplicit-function-declaration]
+  410 |     if (LSM6DSL_ACC_Enable_Significant_Motion_Detection(&LSM6DSL_Sensor) != BSP_ERROR_NONE)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c: At top level:
+/Users/walkerhsu/school/G4/ES_lab/ES_lab_HW2/STM32CubeL4/Projects/B-L475E-IOT01A/Applications/WiFi/WiFi_Client_Server/Src/main.c:47:16: warning: 'RxData' defined but not used [-Wunused-variable]
+   47 | static uint8_t RxData [500];
+      |                ^~~~~~
+make: *** [Application/User/subdir.mk:28: Application/User/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+12:25:20 Build Failed. 7 errors, 9 warnings. (took 1s.287ms)
+
