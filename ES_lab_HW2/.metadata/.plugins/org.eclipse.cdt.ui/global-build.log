@@ -1709,3 +1709,31 @@ arm-none-eabi-size  WiFi_Client_Server.elf
   54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
 Finished building: default.size.stdout
  
+13:17:21 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+13:18:46 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+13:19:43 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
+13:20:54 **** Incremental Build of configuration Debug for project WiFi_Client_Server ****
+make -j7 all 
+arm-none-eabi-size  WiFi_Client_Server.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54388	    540	  97220	 152148	  25254	WiFi_Client_Server.elf
+Finished building: default.size.stdout
+ 
