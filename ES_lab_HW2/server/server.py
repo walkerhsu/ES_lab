@@ -57,6 +57,7 @@ class WifiServer:
                 self.acc_x_list.append(acc_x)
                 self.acc_y_list.append(acc_y)
                 self.acc_z_list.append(acc_z)
+                self.plot_data()
 
         except Exception as e:
             print(f"Error communicating with client: {e}")
