@@ -22,18 +22,17 @@ def input_thread(dev, freq_char, freq_read_char):
     while True:
         try:
             # Capture user input and set new sampling frequency
-            new_freq = input("Enter new sampling frequency (in Hz): ")
-            print(f"New frequency : {int(new_freq)}")
-            if new_freq.isdigit():
-                new_freq = struct.pack('<H', int(new_freq))  # Assuming 16-bit unsigned integer for frequency
+            in_freq = input("Enter new sampling frequency (> 100ms): ")
+            if in_freq.isdigit():
+                new_freq = struct.pack('<H', int(in_freq) // 100)  # Assuming 16-bit unsigned integer for frequency
                 # freq_char.write(new_freq, withResponse=False)
                 freq_handle = freq_char.getHandle() # Get the handle associated with the UUID
-                print(f"freq_handle: {freq_handle}")
                 dev.writeCharacteristic(freq_handle, new_freq, withResponse=False)
-                print(f"Set sampling interval to {new_freq} ms.")
-                freq_value_hex = freq_read_char.read()
-                freq_value = struct.unpack('>I', freq_value_hex)[0]
-                print(f"Current sampling interval : {freq_value} ms")
+                print(f"Set sampling interval to {in_freq} ms.")
+                # freq_value_hex = freq_read_char.read()
+                # freq_value = struct.unpack('>I', freq_value_hex)[0]
+                # print(f"Current sampling interval : {freq_value} ms")
+                
             else:
                 print("Invalid input. Please enter a valid integer.")
         except KeyboardInterrupt:
@@ -76,6 +75,13 @@ for svc in dev.services:
     print("Service ", svc_index)
     svc_index += 1
     print(str(svc))
+    
+    ch_index = 0
+    for ch in svc.getCharacteristics():
+        print("Characteristic ", ch_index)
+        ch_index += 1
+        print(str(ch), ch.uuid, ch.properties, ch.propertiesToString(), f'Handle: {ch.getHandle()}', sep = ' | ')
+    print()
 services = list(dev.services)
 
 try:
@@ -86,12 +92,6 @@ try:
     accel_Service = dev.getServiceByUUID(services[svc_accel_index].uuid)
     freq_Service = dev.getServiceByUUID(services[svc_freq_index].uuid)
     
-    ch_index = 0
-    for ch in freq_Service.getCharacteristics():
-        print("Characteristic ", ch_index)
-        ch_index += 1
-        print(str(ch))
-    
     # get the characteristics
     # accel_char_index = int(input('Enter the accel characteristic number: '))
     accel_characteristics = list(accel_Service.getCharacteristics())
@@ -99,7 +99,8 @@ try:
     freq_read_char_index = 0
     
     freq_characteristics = list(freq_Service.getCharacteristics())
-    freq_char_index = int(input('Enter the freq characteristic number: '))
+    # freq_char_index = int(input('Enter the freq characteristic number: '))
+    freq_char_index = 0
     
     accel_char = dev.getCharacteristics(uuid=accel_characteristics[accel_char_index].uuid)[0]
     freq_read_char = dev.getCharacteristics(uuid=accel_characteristics[freq_read_char_index].uuid)[0]
@@ -117,13 +118,13 @@ try:
     
     # freq_value = struct.unpack('<I', freq_char.read())[0]  # '<H' for little-endian 16-bit integer
     freq_value_hex = freq_read_char.read()
-    print(f"Current sampling frequency in Hex: {freq_value_hex} Hz")
-
+    print(f"Current sampling interval: {struct.unpack('>I', freq_value_hex)[0]} ms")
+    print(f"Current sampling interval in Hex: {freq_value_hex}")
     
     while True:
-        # if dev.waitForNotifications(1.0):
-        #     continue
-        # print("Wait for notification")
+        if dev.waitForNotifications(10.0):
+            continue
+        print("Wait for notification")
         pass
 finally:
     # 断开设备连接
