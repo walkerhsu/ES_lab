@@ -46,7 +46,18 @@ BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
  ../Core/Inc/b_l475e_iot01a1_conf.h \
  ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_errno.h \
  ../Core/Inc/main.h ../BlueNRG_MS/Target/hci_tl_interface.h \
- ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.h
+ ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../Core/Inc/FreeRTOSConfig.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_types.h:
 ../BlueNRG_MS/App/gatt_db.h:
@@ -96,3 +107,14 @@ BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
 ../Core/Inc/main.h:
 ../BlueNRG_MS/Target/hci_tl_interface.h:
 ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+../Core/Inc/FreeRTOSConfig.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
