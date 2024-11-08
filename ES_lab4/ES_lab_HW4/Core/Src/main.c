@@ -85,6 +85,12 @@ const osThreadAttr_t TASK_ACC_attributes = {
   .stack_size = sizeof(TASK_ACCBuffer),
   .priority = (osPriority_t) osPriorityNormal,
 };
+
+/* Definitions for BinarySem01 */
+osSemaphoreId_t BinarySem01Handle;
+const osSemaphoreAttr_t BinarySem01_attributes = {
+  .name = "BinarySem01"
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -155,6 +161,10 @@ int main(void)
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
+
+  /* Create the semaphores(s) */
+  /* creation of BinarySem01 */
+  BinarySem01Handle = osSemaphoreNew(1, 0, &BinarySem01_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -674,29 +684,28 @@ void StartTASK_ACC(void *argument)
 {
   /* USER CODE BEGIN StartTASK_ACC */
   /* Infinite loop */
-  uint32_t curTimeTick = HAL_GetTick();
-  uint32_t nextTimeTick = HAL_GetTick();
 
   int16_t pDataXYZ[3];
   for(;;)
   {
+	osSemaphoreAcquire(BinarySem01Handle, delayTime);
 	BSP_ACCELERO_AccGetXYZ(pDataXYZ);
 	x_axes.AXIS_X = pDataXYZ[0];
 	x_axes.AXIS_Y = pDataXYZ[1];
 	x_axes.AXIS_Z = pDataXYZ[2];
 
-//
 	Acc_Update(&x_axes, &g_axes, &m_axes);
 //	sprintf(TxData, "(%d, %d, %d)", pDataXYZ[0], pDataXYZ[1], pDataXYZ[2]);
 //	ret = WIFI_SendData(Socket, TxData, strlen(TxData), &Datalen, WIFI_WRITE_TIMEOUT);
-    nextTimeTick = HAL_GetTick();
-    while (nextTimeTick - curTimeTick <= delayTime)
-    {
-    	nextTimeTick = HAL_GetTick();
-    }
-    curTimeTick = HAL_GetTick();
+
+
   }
   /* USER CODE END StartTASK_ACC */
+}
+
+void trigger_update()
+{
+	osSemaphoreRelease(BinarySem01Handle);
 }
 
 /**

@@ -122,12 +122,12 @@ void user_notify(void * pData)
   hci_uart_pckt *hci_pckt = pData;
   /* obtain event packet */
   hci_event_pckt *event_pckt = (hci_event_pckt*)hci_pckt->data;
-  PRINTF("HCI PACKET TYPE: 0x%04x, EXPECTED: 0x%04x\r\n", hci_pckt->type, HCI_EVENT_PKT);
+//  PRINTF("HCI PACKET TYPE: 0x%04x, EXPECTED: 0x%04x\r\n", hci_pckt->type, HCI_EVENT_PKT);
 
   if(hci_pckt->type != HCI_EVENT_PKT)
     return;
 
-  PRINTF("EVENT PACKET: 0x%04x, EXPECTED: 0x%04x\r\n", event_pckt->evt, EVT_VENDOR);
+//  PRINTF("EVENT PACKET: 0x%04x, EXPECTED: 0x%04x\r\n", event_pckt->evt, EVT_VENDOR);
   switch(event_pckt->evt){
 
   case EVT_DISCONN_COMPLETE:
@@ -154,7 +154,7 @@ void user_notify(void * pData)
   case EVT_VENDOR:
     {
       evt_blue_aci *blue_evt = (void*)event_pckt->data;
-      PRINTF("ECODE: 0x%04x\r\n", blue_evt->ecode);
+//      PRINTF("ECODE: 0x%04x\r\n", blue_evt->ecode);
       switch(blue_evt->ecode){
 
       case EVT_BLUE_GATT_READ_PERMIT_REQ:
@@ -166,7 +166,7 @@ void user_notify(void * pData)
         // TODO: add a write event
       case EVT_BLUE_GATT_ATTRIBUTE_MODIFIED:
         {
-          PRINTF("ENTERED WRITE SEGMENT\r\n");
+//          PRINTF("ENTERED WRITE SEGMENT\r\n");
           evt_gatt_attr_modified_IDB05A1 *pr = (evt_gatt_attr_modified_IDB05A1*)blue_evt->data;
           Write_Request_CB(pr->attr_handle, pr->data_length, pr->att_data);
         }

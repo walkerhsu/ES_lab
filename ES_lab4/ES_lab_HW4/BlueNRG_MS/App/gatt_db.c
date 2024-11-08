@@ -24,6 +24,8 @@
 #include "bluenrg_conf.h"
 #include "bluenrg_gatt_aci.h"
 #include "b_l475e_iot01a1.h"
+#include "cmsis_os.h"
+#include "main.h"
 
 /** @brief Macro that stores Value into a buffer in Little Endian Format (2 bytes)*/
 #define HOST_TO_LE_16(buf, val)    ( ((buf)[1] =  (uint8_t) (val)    ) , \
@@ -305,16 +307,17 @@ void Read_Request_CB(uint16_t handle)
 
 void Write_Request_CB(uint16_t handle, uint8_t data_length, uint8_t* data)
 {
-	PRINTF("HANDLE: %d; EXPECTED: %d\r\n", handle, QuaternionsCharHandle + 1);
+//	PRINTF("HANDLE: %d; EXPECTED: %d\r\n", handle, QuaternionsCharHandle + 1);
 	if (handle == QuaternionsCharHandle + 1)
 	{
 //		BSP_LED_Toggle(LED2);
 		uint32_t newDelayTime = data[0] + (data[1] << 8);
-		PRINTF("Data: %d\r\n", newDelayTime);
+//		PRINTF("Data: %d\r\n", newDelayTime);
 		if (newDelayTime > 0)
 		{
 			delayTime = newDelayTime * 100;
 			PRINTF("Write request success!!! %d\r\n", delayTime);
+			trigger_update();
 		}
 		else
 		{

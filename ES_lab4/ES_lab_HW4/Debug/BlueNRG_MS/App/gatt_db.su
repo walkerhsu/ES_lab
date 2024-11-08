@@ -1,8 +1,8 @@
-../BlueNRG_MS/App/gatt_db.c:75:12:Add_HWServW2ST_Service	64	static
-../BlueNRG_MS/App/gatt_db.c:122:12:Add_SWServW2ST_Service	64	static
-../BlueNRG_MS/App/gatt_db.c:161:12:Acc_Update	40	static
-../BlueNRG_MS/App/gatt_db.c:196:12:Read_delayTime	24	static
-../BlueNRG_MS/App/gatt_db.c:232:12:Quat_Update	40	static
-../BlueNRG_MS/App/gatt_db.c:283:6:Read_Request_CB	24	static
-../BlueNRG_MS/App/gatt_db.c:306:6:Write_Request_CB	24	static
-../BlueNRG_MS/App/gatt_db.c:326:12:BlueMS_Environmental_Update	40	static
+../BlueNRG_MS/App/gatt_db.c:77:12:Add_HWServW2ST_Service	64	static
+../BlueNRG_MS/App/gatt_db.c:124:12:Add_SWServW2ST_Service	64	static
+../BlueNRG_MS/App/gatt_db.c:163:12:Acc_Update	40	static
+../BlueNRG_MS/App/gatt_db.c:198:12:Read_delayTime	24	static
+../BlueNRG_MS/App/gatt_db.c:234:12:Quat_Update	40	static
+../BlueNRG_MS/App/gatt_db.c:285:6:Read_Request_CB	24	static
+../BlueNRG_MS/App/gatt_db.c:308:6:Write_Request_CB	24	static
+../BlueNRG_MS/App/gatt_db.c:329:12:BlueMS_Environmental_Update	40	static
