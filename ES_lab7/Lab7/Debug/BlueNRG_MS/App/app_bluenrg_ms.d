@@ -53,13 +53,13 @@ BlueNRG_MS/App/app_bluenrg_ms.o: ../BlueNRG_MS/App/app_bluenrg_ms.c \
  ../Middlewares/ST/BlueNRG-MS/includes/link_layer.h \
  ../BlueNRG_MS/App/sensor.h ../BlueNRG_MS/App/gatt_db.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h \
+ ../Core/Inc/math_helper.h ../Core/Inc/arm_math.h \
+ ../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../Middlewares/ST/BlueNRG-MS/includes/compiler.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_utils.h \
  ../Middlewares/ST/BlueNRG-MS/includes/compiler.h \
- ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h \
- ../Core/Inc/b_l475e_IOT01A2_conf.h \
- ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_IOT01A2_errno.h \
- ../Core/Inc/main.h ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap.h \
+ ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h ../Core/Inc/main.h \
+ ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap_aci.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gatt_aci.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gatt_server.h \
@@ -120,12 +120,13 @@ BlueNRG_MS/App/app_bluenrg_ms.o: ../BlueNRG_MS/App/app_bluenrg_ms.c \
 ../BlueNRG_MS/App/sensor.h:
 ../BlueNRG_MS/App/gatt_db.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h:
+../Core/Inc/math_helper.h:
+../Core/Inc/arm_math.h:
+../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../Middlewares/ST/BlueNRG-MS/includes/compiler.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_utils.h:
 ../Middlewares/ST/BlueNRG-MS/includes/compiler.h:
 ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h:
-../Core/Inc/b_l475e_IOT01A2_conf.h:
-../Drivers/BSP/B-L475E-IOT01A2/b_l475e_IOT01A2_errno.h:
 ../Core/Inc/main.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap_aci.h:

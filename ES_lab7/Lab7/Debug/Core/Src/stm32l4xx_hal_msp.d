@@ -40,9 +40,7 @@ Core/Src/stm32l4xx_hal_msp.o: ../Core/Src/stm32l4xx_hal_msp.c \
  ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_bus.h \
  ../Core/Inc/b_l475e_iot01a2_conf.h \
  ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_errno.h \
- ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h \
- ../Core/Inc/b_l475e_IOT01A2_conf.h \
- ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_IOT01A2_errno.h
+ ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -86,5 +84,3 @@ Core/Src/stm32l4xx_hal_msp.o: ../Core/Src/stm32l4xx_hal_msp.c \
 ../Core/Inc/b_l475e_iot01a2_conf.h:
 ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_errno.h:
 ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h:
-../Core/Inc/b_l475e_IOT01A2_conf.h:
-../Drivers/BSP/B-L475E-IOT01A2/b_l475e_IOT01A2_errno.h:

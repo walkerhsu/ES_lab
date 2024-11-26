@@ -1,7 +1,9 @@
 BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_types.h \
- ../BlueNRG_MS/App/gatt_db.h ../BlueNRG_MS/Target/bluenrg_conf.h \
+ ../BlueNRG_MS/App/gatt_db.h ../Core/Inc/math_helper.h \
+ ../Core/Inc/arm_math.h ../Drivers/CMSIS/Include/cmsis_compiler.h \
+ ../Drivers/CMSIS/Include/cmsis_gcc.h ../BlueNRG_MS/Target/bluenrg_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -11,7 +13,6 @@ BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
  ../Drivers/CMSIS/Include/core_cm4.h \
  ../Drivers/CMSIS/Include/cmsis_version.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h \
- ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Include/mpu_armv7.h \
  ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
@@ -42,10 +43,19 @@ BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gatt_aci.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gatt_server.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h \
- ../Middlewares/ST/BlueNRG-MS/includes/compiler.h
+ ../Middlewares/ST/BlueNRG-MS/includes/compiler.h ../Core/Inc/arm_math.h \
+ ../Core/Inc/main.h ../BlueNRG_MS/Target/hci_tl_interface.h \
+ ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_bus.h \
+ ../Core/Inc/b_l475e_iot01a2_conf.h \
+ ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_errno.h \
+ ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_types.h:
 ../BlueNRG_MS/App/gatt_db.h:
+../Core/Inc/math_helper.h:
+../Core/Inc/arm_math.h:
+../Drivers/CMSIS/Include/cmsis_compiler.h:
+../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../BlueNRG_MS/Target/bluenrg_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -56,7 +66,6 @@ BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
 ../Drivers/CMSIS/Include/core_cm4.h:
 ../Drivers/CMSIS/Include/cmsis_version.h:
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
-../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Include/mpu_armv7.h:
 ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
@@ -88,3 +97,10 @@ BlueNRG_MS/App/gatt_db.o: ../BlueNRG_MS/App/gatt_db.c \
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gatt_server.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h:
 ../Middlewares/ST/BlueNRG-MS/includes/compiler.h:
+../Core/Inc/arm_math.h:
+../Core/Inc/main.h:
+../BlueNRG_MS/Target/hci_tl_interface.h:
+../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_bus.h:
+../Core/Inc/b_l475e_iot01a2_conf.h:
+../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_errno.h:
+../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h:

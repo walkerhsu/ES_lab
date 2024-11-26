@@ -2,8 +2,9 @@
 CAD.formats=
 CAD.pinconfig=
 CAD.provider=
+FREERTOS.BinarySemaphores01=SemFilter,Static,SemFilterControlBlock,Depleted;SemVisual,Static,SemVisualControlBlock,Depleted
 FREERTOS.FootprintOK=true
-FREERTOS.IPParameters=Tasks01,FootprintOK
+FREERTOS.IPParameters=Tasks01,FootprintOK,BinarySemaphores01
 FREERTOS.Tasks01=TaskAcc,47,512,StartTaskAcc,Default,NULL,Static,TaskAccBuffer,TaskAccControlBlock;TaskFilter,45,512,StartTaskFilter,Default,NULL,Static,TaskFilterBuffer,TaskFilterControlBlock;TaskVis,8,512,StartTaskVis,Default,NULL,Static,TaskVisBuffer,TaskVisControlBlock
 File.Version=6
 I2C2.IPParameters=Timing

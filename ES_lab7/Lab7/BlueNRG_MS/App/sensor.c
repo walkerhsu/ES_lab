@@ -48,9 +48,11 @@ extern uint16_t AccGyroMagCharHandle;
 
 volatile uint8_t request_free_fall_notify = FALSE;
 
-AxesRaw_t x_axes = {0, 0, 0};
-AxesRaw_t g_axes = {0, 0, 0};
-AxesRaw_t m_axes = {0, 0, 0};
+//AxesRaw_t x_axes = {0, 0, 0};
+//AxesRaw_t g_axes = {0, 0, 0};
+//AxesRaw_t m_axes = {0, 0, 0};
+float* inputF32;
+float* outputF32;
 AxesRaw_t q_axes[SEND_N_QUATERNIONS] = {{0, 0, 0}};
 
 /* Private function prototypes -----------------------------------------------*/
@@ -160,7 +162,6 @@ void user_notify(void * pData)
         }
         break;
       }
-
     }
     break;
   }

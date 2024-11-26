@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file  : b_l475e_IOT01A2.h
+  * @file  : b_l475e_iot01a2.h
   * @brief : header file for the BSP Common driver
   ******************************************************************************
   * @attention
@@ -26,8 +26,8 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "b_l475e_IOT01A2_conf.h"
-#include "b_l475e_IOT01A2_errno.h"
+#include "b_l475e_iot01a2_conf.h"
+#include "b_l475e_iot01a2_errno.h"
 #include "main.h"
 
 #if (USE_BSP_COM_FEATURE > 0)

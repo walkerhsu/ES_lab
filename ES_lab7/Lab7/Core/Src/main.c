@@ -25,17 +25,19 @@
 /* USER CODE BEGIN Includes */
 #include "arm_math.h"
 #include "math_helper.h"
+#include "sensor.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 typedef StaticTask_t osStaticThreadDef_t;
+typedef StaticSemaphore_t osStaticSemaphoreDef_t;
 /* USER CODE BEGIN PTD */
 
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TEST_LENGTH_SAMPLES  320
+#define TEST_LENGTH_SAMPLES  32
 #define SNR_THRESHOLD_F32    140.0f
 #define BLOCK_SIZE            32
 #define NUM_TAPS              29
@@ -70,7 +72,7 @@ const osThreadAttr_t TaskAcc_attributes = {
   .cb_size = sizeof(TaskAccControlBlock),
   .stack_mem = &TaskAccBuffer[0],
   .stack_size = sizeof(TaskAccBuffer),
-  .priority = (osPriority_t) osPriorityHigh7,
+  .priority = (osPriority_t) osPriorityHigh6,
 };
 /* Definitions for TaskFilter */
 osThreadId_t TaskFilterHandle;
@@ -94,14 +96,33 @@ const osThreadAttr_t TaskVis_attributes = {
   .cb_size = sizeof(TaskVisControlBlock),
   .stack_mem = &TaskVisBuffer[0],
   .stack_size = sizeof(TaskVisBuffer),
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityHigh7,
+};
+/* Definitions for SemFilter */
+osSemaphoreId_t SemFilterHandle;
+osStaticSemaphoreDef_t SemFilterControlBlock;
+const osSemaphoreAttr_t SemFilter_attributes = {
+  .name = "SemFilter",
+  .cb_mem = &SemFilterControlBlock,
+  .cb_size = sizeof(SemFilterControlBlock),
+};
+/* Definitions for SemVisual */
+osSemaphoreId_t SemVisualHandle;
+osStaticSemaphoreDef_t SemVisualControlBlock;
+const osSemaphoreAttr_t SemVisual_attributes = {
+  .name = "SemVisual",
+  .cb_mem = &SemVisualControlBlock,
+  .cb_size = sizeof(SemVisualControlBlock),
 };
 /* USER CODE BEGIN PV */
-static float32_t testOutput[TEST_LENGTH_SAMPLES];
 static float32_t firStateF32[BLOCK_SIZE + NUM_TAPS - 1];
+
+static float32_t Input_Acc_Z[TEST_LENGTH_SAMPLES];
+static float32_t Output_Acc_Z[TEST_LENGTH_SAMPLES];
 
 extern float32_t testInput_f32_1kHz_15kHz[TEST_LENGTH_SAMPLES];
 extern float32_t refOutput[TEST_LENGTH_SAMPLES];
+static float32_t testOutput[TEST_LENGTH_SAMPLES];
 
 const float32_t firCoeffs32[NUM_TAPS] = {
   -0.0018225230f, -0.0015879294f, +0.0000000000f, +0.0036977508f, +0.0080754303f, +0.0085302217f, -0.0000000000f, -0.0173976984f,
@@ -112,6 +133,11 @@ const float32_t firCoeffs32[NUM_TAPS] = {
 float32_t  snr;
 uint32_t blockSize = BLOCK_SIZE;
 uint32_t numBlocks = TEST_LENGTH_SAMPLES/BLOCK_SIZE;
+uint32_t cnt = 0;
+arm_fir_instance_f32 S;
+
+extern float32_t* inputF32;
+extern float32_t* outputF32;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -146,12 +172,11 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
   uint32_t i;
-  arm_fir_instance_f32 S;
   arm_status status;
-  float32_t  *inputF32, *outputF32;
+//  float32_t  *inputF32, *outputF32;
 
-  inputF32 = &testInput_f32_1kHz_15kHz[0];
-  outputF32 = &testOutput[0];
+//  inputF32 = &testInput_f32_1kHz_15kHz[0];
+//  outputF32 = &testOutput[0];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -183,28 +208,28 @@ int main(void)
   /* USER CODE BEGIN 2 */
   BSP_ACCELERO_Init();
   HAL_TIM_Base_Start_IT(&htim2);
-  for(i=0; i < numBlocks; i++)
-  {
-	arm_fir_f32(&S, inputF32 + (i * blockSize), outputF32 + (i * blockSize), blockSize);
-  }
-  //  printf("before snr\n");
-  snr = arm_snr_f32(&refOutput[0], &testOutput[0], TEST_LENGTH_SAMPLES);
-  //  printf("%d\r\n", snr);
-  if (snr < SNR_THRESHOLD_F32)
-  {
-	status = ARM_MATH_TEST_FAILURE;
-	printf("failure\r\n");
-  }
-  else
-  {
-	status = ARM_MATH_SUCCESS;
-	printf("success\r\n");
-  }
-
-  if (status != ARM_MATH_SUCCESS)
-  {
-    while (1);
-  }
+//  for(i=0; i < numBlocks; i++)
+//  {
+//	arm_fir_f32(&S, inputF32 + (i * blockSize), outputF32 + (i * blockSize), blockSize);
+//  }
+//  //  printf("before snr\n");
+//  snr = arm_snr_f32(&refOutput[0], &testOutput[0], TEST_LENGTH_SAMPLES);
+//  //  printf("%d\r\n", snr);
+//  if (snr < SNR_THRESHOLD_F32)
+//  {
+//	status = ARM_MATH_TEST_FAILURE;
+//	printf("failure\r\n");
+//  }
+//  else
+//  {
+//	status = ARM_MATH_SUCCESS;
+//	printf("success\r\n");
+//  }
+//
+//  if (status != ARM_MATH_SUCCESS)
+//  {
+//    while (1);
+//  }
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -213,6 +238,13 @@ int main(void)
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
+
+  /* Create the semaphores(s) */
+  /* creation of SemFilter */
+  SemFilterHandle = osSemaphoreNew(1, 0, &SemFilter_attributes);
+
+  /* creation of SemVisual */
+  SemVisualHandle = osSemaphoreNew(1, 0, &SemVisual_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -783,6 +815,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim == &htim2){
 		int16_t pDataXYZ[3];
 		BSP_ACCELERO_AccGetXYZ(pDataXYZ);
+		printf("%d, %d, %d\r\n", pDataXYZ[0], pDataXYZ[1], pDataXYZ[2]);
+
+		Input_Acc_Z[cnt] = pDataXYZ[2];
+		cnt += 1;
+		if(cnt == TEST_LENGTH_SAMPLES){
+			cnt = 0;
+			printf("before 1st Release\r\n");
+			osSemaphoreRelease(SemFilterHandle);
+		}
 	}
 }
 /* USER CODE END 4 */
@@ -818,7 +859,25 @@ void StartTaskFilter(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      osSemaphoreAcquire(SemFilterHandle, osWaitForever);
+//      printf("after 1st Acquire\r\n");
+      uint32_t i;
+      inputF32 = &Input_Acc_Z[0];
+      outputF32 = &Output_Acc_Z[0];
+      for(i=0; i < numBlocks; i++)
+	  {
+    	  arm_fir_f32(&S, inputF32 + (i * blockSize), outputF32 + (i * blockSize), blockSize);
+	  }
+//      printf("before 2nd Release\r\n");s
+      Acc_Update(0, inputF32);
+      Acc_Update(256, inputF32 + 8);
+      Acc_Update(256*2, inputF32 + 16);
+      Acc_Update(256*3, inputF32 + 24);
+	  Acc_Update(256*4, outputF32);
+	  Acc_Update(256*5, outputF32 + 8);
+	  Acc_Update(256*6, outputF32 + 16);
+	  Acc_Update(256*7, outputF32 + 24);
+	  osDelay(1);
   }
   /* USER CODE END StartTaskFilter */
 }
@@ -834,10 +893,18 @@ void StartTaskVis(void *argument)
 {
   /* USER CODE BEGIN StartTaskVis */
   /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+	for(;;)
+	  {
+	//	if (set_connectable)
+	//	  {
+	//		Set_DeviceConnectable();
+	//		set_connectable = FALSE;
+	//	  }
+		MX_BlueNRG_MS_Process();
+	//
+	//	  hci_user_evt_proc();
+	    osDelay(1);
+	  }
   /* USER CODE END StartTaskVis */
 }
 

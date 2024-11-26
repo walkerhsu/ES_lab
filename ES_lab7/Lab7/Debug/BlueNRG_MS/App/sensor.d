@@ -2,6 +2,9 @@ BlueNRG_MS/App/sensor.o: ../BlueNRG_MS/App/sensor.c \
  ../BlueNRG_MS/App/sensor.h ../BlueNRG_MS/App/gatt_db.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_types.h \
+ ../Core/Inc/math_helper.h ../Core/Inc/arm_math.h \
+ ../Drivers/CMSIS/Include/cmsis_compiler.h \
+ ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap.h \
  ../Middlewares/ST/BlueNRG-MS/includes/link_layer.h \
  ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h \
@@ -22,7 +25,6 @@ BlueNRG_MS/App/sensor.o: ../BlueNRG_MS/App/sensor.c \
  ../Drivers/CMSIS/Include/core_cm4.h \
  ../Drivers/CMSIS/Include/cmsis_version.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h \
- ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Include/mpu_armv7.h \
  ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
@@ -63,6 +65,10 @@ BlueNRG_MS/App/sensor.o: ../BlueNRG_MS/App/sensor.c \
 ../BlueNRG_MS/App/gatt_db.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_types.h:
+../Core/Inc/math_helper.h:
+../Core/Inc/arm_math.h:
+../Drivers/CMSIS/Include/cmsis_compiler.h:
+../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_gap.h:
 ../Middlewares/ST/BlueNRG-MS/includes/link_layer.h:
 ../Middlewares/ST/BlueNRG-MS/includes/bluenrg_def.h:
@@ -83,7 +89,6 @@ BlueNRG_MS/App/sensor.o: ../BlueNRG_MS/App/sensor.c \
 ../Drivers/CMSIS/Include/core_cm4.h:
 ../Drivers/CMSIS/Include/cmsis_version.h:
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
-../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Include/mpu_armv7.h:
 ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:

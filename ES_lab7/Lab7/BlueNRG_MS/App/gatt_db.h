@@ -22,6 +22,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include "bluenrg_def.h"
+#include "math_helper.h"
 
 #define X_OFFSET 200
 #define Y_OFFSET 50
@@ -76,7 +77,7 @@ tBleStatus Add_HWServW2ST_Service(void);
 tBleStatus Add_SWServW2ST_Service(void);
 void Read_Request_CB(uint16_t handle);
 tBleStatus BlueMS_Environmental_Update(int32_t press, int16_t temp);
-tBleStatus Acc_Update(AxesRaw_t *x_axes, AxesRaw_t *g_axes, AxesRaw_t *m_axes);
+tBleStatus Acc_Update(int datatype, float32_t *data);
 tBleStatus Quat_Update(AxesRaw_t *q_axes);
 
 extern uint8_t Services_Max_Attribute_Records[];

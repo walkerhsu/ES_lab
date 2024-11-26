@@ -41,8 +41,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/b_l475e_iot01a2_conf.h \
  ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_errno.h \
  ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h \
- ../Core/Inc/b_l475e_IOT01A2_conf.h \
- ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_IOT01A2_errno.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -56,7 +54,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../BlueNRG_MS/App/app_bluenrg_ms.h ../Core/Inc/arm_math.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h ../Core/Inc/math_helper.h \
- ../Core/Inc/arm_math.h
+ ../Core/Inc/arm_math.h ../BlueNRG_MS/App/sensor.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -100,8 +98,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/b_l475e_iot01a2_conf.h:
 ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2_errno.h:
 ../Drivers/BSP/B-L475E-IOT01A2/b_l475e_iot01a2.h:
-../Core/Inc/b_l475e_IOT01A2_conf.h:
-../Drivers/BSP/B-L475E-IOT01A2/b_l475e_IOT01A2_errno.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -118,3 +114,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../Core/Inc/math_helper.h:
 ../Core/Inc/arm_math.h:
+../BlueNRG_MS/App/sensor.h:
