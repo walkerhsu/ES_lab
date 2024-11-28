@@ -72,8 +72,8 @@ all: main-build
 main-build: Lab7.elf secondary-outputs
 
 # Tool invocations
-Lab7.elf Lab7.map: $(OBJS) $(USER_OBJS) D:\STM32CubeIDE\workspace_1.16.1\Lab7\STM32L475VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Lab7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32CubeIDE\workspace_1.16.1\Lab7\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab7.map" -Wl,--gc-sections -static -L"D:\STM32CubeIDE\workspace_1.16.1\Lab7\Drivers\CMSIS\DSP\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Lab7.elf Lab7.map: $(OBJS) $(USER_OBJS) C:\Users\User\STM32CubeIDE\workspace_1.16.0\Lab7\STM32L475VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Lab7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\workspace_1.16.0\Lab7\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab7.map" -Wl,--gc-sections -static -L"C:\Users\User\STM32CubeIDE\workspace_1.16.0\Lab7\Drivers\CMSIS\DSP\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

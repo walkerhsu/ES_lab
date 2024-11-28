@@ -3,7 +3,7 @@ from bluepy.btle import Scanner, DefaultDelegate
 from bluepy import btle
 import struct
 import threading
-import matplotlib as plt
+import matplotlib.pyplot as plt
 unfiltered = []
 filtered = []
 class ScanDelegate(DefaultDelegate):
@@ -15,17 +15,38 @@ class ScanDelegate(DefaultDelegate):
         elif isNewData:
             print ("Received new data from", dev.addr)
     def handleNotification(self, chandle, data):
+        global unfiltered, filtered
         # Data format should match what STM32 sends (e.g., 3 16-bit integers for acceleration)
         print(len(data))
-        print(data)
-        data = struct.unpack('>' + 'h' * 9, data)
+        # print(data)
+        data = struct.unpack('<' + 'h' * 9, data)
         iffilter = data[0]
         z_accel_values = data[1:]
+        for value in z_accel_values:
+            print(value)
+        # map(lambda data: data - 0x10000 if data >= 0x8000 else data, z_accel_values)
+        
         # accel_x, accel_y, accel_z = struct.unpack('>hhh', data)  # assuming little-endian and 16-bit signed values
-        print(f"{iffilter} Received data is {'filtered' if iffilter < 4 else 'unfiltered'}")
+        print(f"{iffilter} Received data is {'unfiltered' if iffilter < 4 else 'filtered'}")
+        
         if iffilter < 4:
-
+            unfiltered.extend([*z_accel_values])
         else:
+            filtered.extend([*z_accel_values])
+        
+        print(unfiltered, filtered)
+        
+        if len(filtered) == 32:
+            plt.figure()
+            plt.title('Z axis acceleration')
+            plt.plot(range(len(unfiltered)), unfiltered, label='unfiltered', color='blue')
+            plt.plot(range(len(filtered)), filtered, label='filtered', color='red')
+            
+            plt.legend()
+            plt.savefig('./curve.png')
+            
+            unfiltered = []
+            filtered = []
             
         # for z_value in z_accel_values:
         #     print(z_value)
