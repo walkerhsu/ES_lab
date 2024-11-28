@@ -138,6 +138,7 @@ arm_fir_instance_f32 S;
 
 extern float32_t* inputF32;
 extern float32_t* outputF32;
+int16_t isfiltered = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -812,11 +813,10 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	if(htim == &htim2){
+	if(htim == &htim2 && isfiltered == 0){
 		int16_t pDataXYZ[3];
 		BSP_ACCELERO_AccGetXYZ(pDataXYZ);
 		printf("%d, %d, %d\r\n", pDataXYZ[0], pDataXYZ[1], pDataXYZ[2]);
-
 		Input_Acc_Z[cnt] = pDataXYZ[2];
 		cnt += 1;
 		if(cnt == TEST_LENGTH_SAMPLES){
@@ -860,9 +860,11 @@ void StartTaskFilter(void *argument)
   for(;;)
   {
       osSemaphoreAcquire(SemFilterHandle, osWaitForever);
+      isfiltered = 1;
 //      printf("after 1st Acquire\r\n");
       uint32_t i;
       inputF32 = &Input_Acc_Z[0];
+
       outputF32 = &Output_Acc_Z[0];
       for(i=0; i < numBlocks; i++)
 	  {
@@ -870,14 +872,16 @@ void StartTaskFilter(void *argument)
 	  }
 //      printf("before 2nd Release\r\n");s
       Acc_Update(0, inputF32);
-      Acc_Update(256, inputF32 + 8);
-      Acc_Update(256*2, inputF32 + 16);
-      Acc_Update(256*3, inputF32 + 24);
-	  Acc_Update(256*4, outputF32);
-	  Acc_Update(256*5, outputF32 + 8);
-	  Acc_Update(256*6, outputF32 + 16);
-	  Acc_Update(256*7, outputF32 + 24);
+      Acc_Update(1, inputF32 + 8);
+      Acc_Update(2, inputF32 + 16);
+      Acc_Update(3, inputF32 + 24);
+
+	  Acc_Update(4, outputF32);
+	  Acc_Update(5, outputF32 + 8);
+	  Acc_Update(6, outputF32 + 16);
+	  Acc_Update(7, outputF32 + 24);
 	  osDelay(1);
+	  isfiltered = 0;
   }
   /* USER CODE END StartTaskFilter */
 }
