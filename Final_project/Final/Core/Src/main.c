@@ -18,14 +18,17 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "app_bluenrg_ms.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
+typedef StaticTask_t osStaticThreadDef_t;
+typedef StaticSemaphore_t osStaticSemaphoreDef_t;
 /* USER CODE BEGIN PTD */
 
 /* USER CODE END PTD */
@@ -51,8 +54,73 @@ UART_HandleTypeDef huart3;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
+/* Definitions for TaskDataTrans */
+osThreadId_t TaskDataTransHandle;
+uint32_t TaskDataTransBuffer[ 512 ];
+osStaticThreadDef_t TaskDataTransControlBlock;
+const osThreadAttr_t TaskDataTrans_attributes = {
+  .name = "TaskDataTrans",
+  .cb_mem = &TaskDataTransControlBlock,
+  .cb_size = sizeof(TaskDataTransControlBlock),
+  .stack_mem = &TaskDataTransBuffer[0],
+  .stack_size = sizeof(TaskDataTransBuffer),
+  .priority = (osPriority_t) osPriorityNormal,
+};
+/* Definitions for TaskBLE */
+osThreadId_t TaskBLEHandle;
+uint32_t TaskBLEBuffer[ 512 ];
+osStaticThreadDef_t TaskBLEControlBlock;
+const osThreadAttr_t TaskBLE_attributes = {
+  .name = "TaskBLE",
+  .cb_mem = &TaskBLEControlBlock,
+  .cb_size = sizeof(TaskBLEControlBlock),
+  .stack_mem = &TaskBLEBuffer[0],
+  .stack_size = sizeof(TaskBLEBuffer),
+  .priority = (osPriority_t) osPriorityHigh,
+};
+/* Definitions for TaskRemind */
+osThreadId_t TaskRemindHandle;
+uint32_t TaskRemindBuffer[ 512 ];
+osStaticThreadDef_t TaskRemindControlBlock;
+const osThreadAttr_t TaskRemind_attributes = {
+  .name = "TaskRemind",
+  .cb_mem = &TaskRemindControlBlock,
+  .cb_size = sizeof(TaskRemindControlBlock),
+  .stack_mem = &TaskRemindBuffer[0],
+  .stack_size = sizeof(TaskRemindBuffer),
+  .priority = (osPriority_t) osPriorityAboveNormal,
+};
+/* Definitions for TaskGyro */
+osThreadId_t TaskGyroHandle;
+uint32_t TaskGyroBuffer[ 512 ];
+osStaticThreadDef_t TaskGyroControlBlock;
+const osThreadAttr_t TaskGyro_attributes = {
+  .name = "TaskGyro",
+  .cb_mem = &TaskGyroControlBlock,
+  .cb_size = sizeof(TaskGyroControlBlock),
+  .stack_mem = &TaskGyroBuffer[0],
+  .stack_size = sizeof(TaskGyroBuffer),
+  .priority = (osPriority_t) osPriorityAboveNormal7,
+};
+/* Definitions for SemDrinkAction */
+osSemaphoreId_t SemDrinkActionHandle;
+osStaticSemaphoreDef_t SemDrinkActionControlBlock;
+const osSemaphoreAttr_t SemDrinkAction_attributes = {
+  .name = "SemDrinkAction",
+  .cb_mem = &SemDrinkActionControlBlock,
+  .cb_size = sizeof(SemDrinkActionControlBlock),
+};
+/* Definitions for SemRemind */
+osSemaphoreId_t SemRemindHandle;
+osStaticSemaphoreDef_t SemRemindControlBlock;
+const osSemaphoreAttr_t SemRemind_attributes = {
+  .name = "SemRemind",
+  .cb_mem = &SemRemindControlBlock,
+  .cb_size = sizeof(SemRemindControlBlock),
+};
 /* USER CODE BEGIN PV */
-
+int waterintake;
+float pData[3];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,6 +131,11 @@ static void MX_I2C2_Init(void);
 static void MX_QUADSPI_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
+void StartTaskDataTrans(void *argument);
+void StartTaskBLE(void *argument);
+void StartTaskRemind(void *argument);
+void StartTaskGyro(void *argument);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -109,7 +182,61 @@ int main(void)
   MX_BlueNRG_MS_Init();
   /* USER CODE BEGIN 2 */
   BSP_GYRO_Init();
+  waterintake = 100;
+  int counter = 0;
   /* USER CODE END 2 */
+
+  /* Init scheduler */
+  osKernelInitialize();
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* Create the semaphores(s) */
+  /* creation of SemDrinkAction */
+  SemDrinkActionHandle = osSemaphoreNew(1, 0, &SemDrinkAction_attributes);
+
+  /* creation of SemRemind */
+  SemRemindHandle = osSemaphoreNew(1, 0, &SemRemind_attributes);
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* creation of TaskDataTrans */
+  TaskDataTransHandle = osThreadNew(StartTaskDataTrans, NULL, &TaskDataTrans_attributes);
+
+  /* creation of TaskBLE */
+  TaskBLEHandle = osThreadNew(StartTaskBLE, NULL, &TaskBLE_attributes);
+
+  /* creation of TaskRemind */
+  TaskRemindHandle = osThreadNew(StartTaskRemind, NULL, &TaskRemind_attributes);
+
+  /* creation of TaskGyro */
+  TaskGyroHandle = osThreadNew(StartTaskGyro, NULL, &TaskGyro_attributes);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_EVENTS */
+  /* add events, ... */
+  /* USER CODE END RTOS_EVENTS */
+
+  /* Start scheduler */
+  osKernelStart();
+
+  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -117,11 +244,19 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
+    /* USER CODE BEGIN 3 */
+	  printf("before MS_process\r\n");
 	  MX_BlueNRG_MS_Process();
-		/* USER CODE BEGIN 3 */
-	  float pData[3];
+	  printf("after MS_process\r\n");
 	  BSP_GYRO_GetXYZ(pData);
+	  printf("start printing gyro data\r\n");
 	  printf("(%.2f, %.2f, %.2f)\r\n", pData[0]/1000, pData[1]/1000, pData[2]/1000);
+//	  printf("%.2f\r\n", pData[1]/1000);
+	  counter += 1;
+	  if(counter == 20){	// detect drink action
+		  osSemaphoreRelease(SemDrinkActionHandle);
+		  counter = 0;
+	  }
 	  HAL_Delay(200);
   }
   /* USER CODE END 3 */
@@ -551,10 +686,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
@@ -564,6 +699,81 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartTaskDataTrans */
+/**
+  * @brief  Function implementing the TaskDataTrans thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartTaskDataTrans */
+void StartTaskDataTrans(void *argument)
+{
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+	  osSemaphoreAcquire(SemDrinkActionHandle, osWaitForever);
+	  printf("start transfer data\r\n");
+	  Acc_Update(waterintake);
+	  osDelay(1);
+  }
+  /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_StartTaskBLE */
+/**
+* @brief Function implementing the TaskBLE thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTaskBLE */
+void StartTaskBLE(void *argument)
+{
+  /* USER CODE BEGIN StartTaskBLE */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTaskBLE */
+}
+
+/* USER CODE BEGIN Header_StartTaskRemind */
+/**
+* @brief Function implementing the TaskRemind thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTaskRemind */
+void StartTaskRemind(void *argument)
+{
+  /* USER CODE BEGIN StartTaskRemind */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTaskRemind */
+}
+
+/* USER CODE BEGIN Header_StartTaskGyro */
+/**
+* @brief Function implementing the TaskGyro thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTaskGyro */
+void StartTaskGyro(void *argument)
+{
+  /* USER CODE BEGIN StartTaskGyro */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTaskGyro */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

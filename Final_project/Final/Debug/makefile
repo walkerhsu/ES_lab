@@ -9,6 +9,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
 -include Middlewares/ST/BlueNRG-MS/utils/subdir.mk
 -include Middlewares/ST/BlueNRG-MS/hci/hci_tl_patterns/Basic/subdir.mk
 -include Middlewares/ST/BlueNRG-MS/hci/controller/subdir.mk
@@ -68,8 +72,8 @@ all: main-build
 main-build: Final.elf secondary-outputs
 
 # Tool invocations
-Final.elf Final.map: $(OBJS) $(USER_OBJS) C:\Users\User\STM32CubeIDE\workspace_1.16.0\Final\STM32L475VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Final.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\workspace_1.16.0\Final\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Final.elf Final.map: $(OBJS) $(USER_OBJS) D:\ES_lab\Final_project\Final\STM32L475VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Final.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\ES_lab\Final_project\Final\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
