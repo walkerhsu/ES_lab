@@ -1,8 +1,7 @@
 Drivers/BSP/B-L475E-IOT01A1/stm32l475e_iot01_gyro.o: \
  C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.c \
  C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.h \
- ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1.h \
- ../Core/Inc/b_l475e_iot01a1_conf.h \
+ C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -38,15 +37,11 @@ Drivers/BSP/B-L475E-IOT01A1/stm32l475e_iot01_gyro.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_errno.h \
- ../Core/Inc/main.h ../BlueNRG_MS/Target/hci_tl_interface.h \
- ../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.h \
  C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/../Components/lsm6dsl/lsm6dsl.h \
  C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/../Components/lsm6dsl/../Common/accelero.h \
  C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/../Components/lsm6dsl/../Common/gyro.h
 C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.h:
-../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1.h:
-../Core/Inc/b_l475e_iot01a1_conf.h:
+C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
@@ -82,10 +77,6 @@ C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-I
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_errno.h:
-../Core/Inc/main.h:
-../BlueNRG_MS/Target/hci_tl_interface.h:
-../Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.h:
 C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/../Components/lsm6dsl/lsm6dsl.h:
 C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/../Components/lsm6dsl/../Common/accelero.h:
 C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/../Components/lsm6dsl/../Common/gyro.h:
