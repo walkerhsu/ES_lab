@@ -121,6 +121,7 @@ const osSemaphoreAttr_t SemRemind_attributes = {
 /* USER CODE BEGIN PV */
 int waterintake;
 float pData[3];
+uint32_t RemindInterval = 500;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -182,8 +183,6 @@ int main(void)
   MX_BlueNRG_MS_Init();
   /* USER CODE BEGIN 2 */
   BSP_GYRO_Init();
-  waterintake = 100;
-  int counter = 0;
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -245,19 +244,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  printf("before MS_process\r\n");
-	  MX_BlueNRG_MS_Process();
-	  printf("after MS_process\r\n");
-	  BSP_GYRO_GetXYZ(pData);
-	  printf("start printing gyro data\r\n");
-	  printf("(%.2f, %.2f, %.2f)\r\n", pData[0]/1000, pData[1]/1000, pData[2]/1000);
-//	  printf("%.2f\r\n", pData[1]/1000);
-	  counter += 1;
-	  if(counter == 20){	// detect drink action
-		  osSemaphoreRelease(SemDrinkActionHandle);
-		  counter = 0;
-	  }
-	  HAL_Delay(200);
+
   }
   /* USER CODE END 3 */
 }
@@ -734,6 +721,7 @@ void StartTaskBLE(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	MX_BlueNRG_MS_Process();
     osDelay(1);
   }
   /* USER CODE END StartTaskBLE */
@@ -749,9 +737,15 @@ void StartTaskBLE(void *argument)
 void StartTaskRemind(void *argument)
 {
   /* USER CODE BEGIN StartTaskRemind */
+  osStatus_t status;
   /* Infinite loop */
   for(;;)
   {
+	status = osSemaphoreAcquire(SemRemindHandle, RemindInterval);
+	if(status == osErrorTimeout)
+	{
+		Remind_Update();
+	}
     osDelay(1);
   }
   /* USER CODE END StartTaskRemind */
@@ -767,10 +761,22 @@ void StartTaskRemind(void *argument)
 void StartTaskGyro(void *argument)
 {
   /* USER CODE BEGIN StartTaskGyro */
+  waterintake = 100;
+  int counter = 0;
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	BSP_GYRO_GetXYZ(pData);
+	printf("start printing gyro data\r\n");
+	printf("(%.2f, %.2f, %.2f)\r\n", pData[0]/1000, pData[1]/1000, pData[2]/1000);
+	//	  printf("%.2f\r\n", pData[1]/1000);
+	// Algorithm
+	counter += 1;
+	if(counter == 20){	// detect drink action
+	  osSemaphoreRelease(SemDrinkActionHandle);
+	  counter = 0;
+	}
+	osDelay(200);
   }
   /* USER CODE END StartTaskGyro */
 }
