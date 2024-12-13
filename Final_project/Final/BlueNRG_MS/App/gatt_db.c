@@ -25,8 +25,8 @@
 #include "bluenrg_gatt_aci.h"
 
 /** @brief Macro that stores Value into a buffer in Little Endian Format (2 bytes)*/
-#define HOST_TO_LE_16(buf, val)    ( ((buf)[0] =  (uint8_t) (val)    ) , \
-                                   ((buf)[1] =  (uint8_t) (val>>8) ) )
+#define HOST_TO_LE_16(buf, val)    ( ((buf)[1] =  (uint8_t) (val)    ) , \
+                                   ((buf)[0] =  (uint8_t) (val>>8) ) )
 
 /** @brief Macro that stores Value into a buffer in Little Endian Format (4 bytes) */
 #define HOST_TO_LE_32(buf, val)    ( ((buf)[0] =  (uint8_t) (val)     ) , \
@@ -46,11 +46,16 @@ do {\
 #define COPY_HW_SENS_W2ST_SERVICE_UUID(uuid_struct)    COPY_UUID_128(uuid_struct,0x00,0x00,0x00,0x00,0x00,0x01,0x11,0xe1,0x9a,0xb4,0x00,0x02,0xa5,0xd5,0xc5,0x1b)
 #define COPY_ENVIRONMENTAL_W2ST_CHAR_UUID(uuid_struct) COPY_UUID_128(uuid_struct,0x00,0x00,0x00,0x00,0x00,0x01,0x11,0xe1,0xac,0x36,0x00,0x02,0xa5,0xd5,0xc5,0x1b)
 #define COPY_ACC_GYRO_MAG_W2ST_CHAR_UUID(uuid_struct)  COPY_UUID_128(uuid_struct,0x00,0xE0,0x00,0x00,0x00,0x01,0x11,0xe1,0xac,0x36,0x00,0x02,0xa5,0xd5,0xc5,0x1b)
+#define COPY_REMIND_INTERVAL_W2ST_CHAR_UUID(uuid_struct)  COPY_UUID_128(uuid_struct,0x00,0x00,0x00,0x00,0x00,0x01,0x11,0xe1,0xac,0x36,0x00,0x02,0xa5,0xd5,0xc5,0x00)
+#define COPY_SEND_REMIND_W2ST_CHAR_UUID(uuid_struct)  COPY_UUID_128(uuid_struct,0x00,0x00,0x00,0x00,0x00,0x01,0x11,0xe1,0xac,0x36,0x00,0x02,0xa5,0xd5,0xc5,0x01)
 /* Software Characteristics Service */
 #define COPY_SW_SENS_W2ST_SERVICE_UUID(uuid_struct)    COPY_UUID_128(uuid_struct,0x00,0x00,0x00,0x00,0x00,0x02,0x11,0xe1,0x9a,0xb4,0x00,0x02,0xa5,0xd5,0xc5,0x1b)
 #define COPY_QUATERNIONS_W2ST_CHAR_UUID(uuid_struct)   COPY_UUID_128(uuid_struct,0x00,0x00,0x01,0x00,0x00,0x01,0x11,0xe1,0xac,0x36,0x00,0x02,0xa5,0xd5,0xc5,0x1b)
 
 uint16_t HWServW2STHandle, EnvironmentalCharHandle, AccGyroMagCharHandle;
+// Acc : send water intake
+uint16_t RemindIntervalHandle, SendRemindHandle;
+// write new remind interval, send remind
 uint16_t SWServW2STHandle, QuaternionsCharHandle;
 
 /* UUIDS */
@@ -60,6 +65,8 @@ Char_UUID_t char_uuid;
 extern AxesRaw_t x_axes;
 extern AxesRaw_t g_axes;
 extern AxesRaw_t m_axes;
+extern int waterintake;
+extern uint32_t RemindInterval;
 
 extern uint16_t connection_handle;
 extern uint32_t start_time;
@@ -88,8 +95,8 @@ tBleStatus Add_HWServW2ST_Service(void)
   uuid[14] |= 0x10; /* Pressure value*/
   BLUENRG_memcpy(&char_uuid.Char_UUID_128, uuid, 16);
   ret =  aci_gatt_add_char(HWServW2STHandle, UUID_TYPE_128, char_uuid.Char_UUID_128,
-                           2+2+4,
-                           CHAR_PROP_NOTIFY|CHAR_PROP_READ,
+                           2,
+                           CHAR_PROP_NOTIFY,
                            ATTR_PERMISSION_NONE,
                            GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
                            16, 0, &EnvironmentalCharHandle);
@@ -100,11 +107,33 @@ tBleStatus Add_HWServW2ST_Service(void)
   COPY_ACC_GYRO_MAG_W2ST_CHAR_UUID(uuid);
   BLUENRG_memcpy(&char_uuid.Char_UUID_128, uuid, 16);
   ret =  aci_gatt_add_char(HWServW2STHandle, UUID_TYPE_128, char_uuid.Char_UUID_128,
-                           2+3*3*2,
+                           2,
                            CHAR_PROP_NOTIFY,
                            ATTR_PERMISSION_NONE,
                            GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
                            16, 0, &AccGyroMagCharHandle);
+  if (ret != BLE_STATUS_SUCCESS)
+    return BLE_STATUS_ERROR;
+
+  COPY_REMIND_INTERVAL_W2ST_CHAR_UUID(uuid);
+  BLUENRG_memcpy(&char_uuid.Char_UUID_128, uuid, 16);
+  ret =  aci_gatt_add_char(HWServW2STHandle, UUID_TYPE_128, char_uuid.Char_UUID_128,
+                           2,
+                           CHAR_PROP_WRITE,
+                           ATTR_PERMISSION_NONE,
+                           GATT_NOTIFY_WRITE_REQ_AND_WAIT_FOR_APPL_RESP,
+                           16, 0, &RemindIntervalHandle);
+  if (ret != BLE_STATUS_SUCCESS)
+    return BLE_STATUS_ERROR;
+
+  COPY_SEND_REMIND_W2ST_CHAR_UUID(uuid);
+  BLUENRG_memcpy(&char_uuid.Char_UUID_128, uuid, 16);
+  ret =  aci_gatt_add_char(HWServW2STHandle, UUID_TYPE_128, char_uuid.Char_UUID_128,
+                           2,
+                           CHAR_PROP_NOTIFY,
+                           ATTR_PERMISSION_NONE,
+                           GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
+                           16, 0, &SendRemindHandle);
   if (ret != BLE_STATUS_SUCCESS)
     return BLE_STATUS_ERROR;
 
@@ -155,27 +184,17 @@ fail:
  * @param  AxesRaw_t structure containing acceleration value in mg.
  * @retval tBleStatus Status
  */
-tBleStatus Acc_Update(AxesRaw_t *x_axes, AxesRaw_t *g_axes, AxesRaw_t *m_axes)
+tBleStatus Acc_Update(int waterintake)
 {
-  uint8_t buff[2+2*3*3];
+  uint8_t buff[2];
   tBleStatus ret;
 
-  HOST_TO_LE_16(buff,(HAL_GetTick()>>3));
-
-  HOST_TO_LE_16(buff+2,-x_axes->AXIS_Y);
-  HOST_TO_LE_16(buff+4, x_axes->AXIS_X);
-  HOST_TO_LE_16(buff+6,-x_axes->AXIS_Z);
-
-  HOST_TO_LE_16(buff+8,g_axes->AXIS_Y);
-  HOST_TO_LE_16(buff+10,g_axes->AXIS_X);
-  HOST_TO_LE_16(buff+12,g_axes->AXIS_Z);
-
-  HOST_TO_LE_16(buff+14,m_axes->AXIS_Y);
-  HOST_TO_LE_16(buff+16,m_axes->AXIS_X);
-  HOST_TO_LE_16(buff+18,m_axes->AXIS_Z);
-
+//  HOST_TO_LE_16(buff,(HAL_GetTick()>>3));
+//
+//  HOST_TO_LE_16(buff+2,-x_axes->AXIS_Y);
+  HOST_TO_LE_16(buff, waterintake);
   ret = aci_gatt_update_char_value(HWServW2STHandle, AccGyroMagCharHandle,
-				   0, 2+2*3*3, buff);
+				   0, 2, buff);
   if (ret != BLE_STATUS_SUCCESS){
     PRINTF("Error while updating Acceleration characteristic: 0x%02X\n",ret) ;
     return BLE_STATUS_ERROR ;
@@ -183,6 +202,24 @@ tBleStatus Acc_Update(AxesRaw_t *x_axes, AxesRaw_t *g_axes, AxesRaw_t *m_axes)
 
   return BLE_STATUS_SUCCESS;
 }
+
+tBleStatus Remind_Update(void)
+{
+	uint8_t buff[2];
+	tBleStatus ret;
+	int reminder = 1;
+	HOST_TO_LE_16(buff, reminder);
+
+	ret = aci_gatt_update_char_value(HWServW2STHandle, SendRemindHandle,
+					 0, 2, buff);
+	if (ret != BLE_STATUS_SUCCESS){
+	    PRINTF("Error while updating Acceleration characteristic: 0x%02X\n",ret) ;
+	    return BLE_STATUS_ERROR ;
+	}
+
+	return BLE_STATUS_SUCCESS;
+}
+
 
 /**
  * @brief  Update quaternions characteristic value
@@ -246,7 +283,7 @@ void Read_Request_CB(uint16_t handle)
 
   if(handle == AccGyroMagCharHandle + 1)
   {
-    Acc_Update(&x_axes, &g_axes, &m_axes);
+//    Acc_Update(&x_axes, &g_axes, &m_axes);
   }
   else if (handle == EnvironmentalCharHandle + 1)
   {
@@ -264,6 +301,26 @@ void Read_Request_CB(uint16_t handle)
       PRINTF("aci_gatt_allow_read() failed: 0x%02x\r\n", ret);
     }
   }
+}
+
+void Write_Request_CB(uint16_t handle, uint8_t* data)
+{
+//	PRINTF("HANDLE: %d; EXPECTED: %d\r\n", handle, QuaternionsCharHandle + 1);
+	if (handle == RemindIntervalHandle + 1)
+	{
+//		BSP_LED_Toggle(LED2);
+		uint32_t newRemindInterval = data[0] + (data[1] << 8);
+//		PRINTF("Data: %d\r\n", newDelayTime);
+		if (newRemindInterval > 0)
+		{
+			RemindInterval = newRemindInterval * 100;
+			PRINTF("Write request success!!! %d\r\n", RemindInterval);
+		}
+		else
+		{
+			PRINTF("INVALID DATA VALUE!!!\r\n");
+		}
+	}
 }
 
 tBleStatus BlueMS_Environmental_Update(int32_t press, int16_t temp)

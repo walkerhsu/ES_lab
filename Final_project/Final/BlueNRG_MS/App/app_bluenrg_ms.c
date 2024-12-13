@@ -275,29 +275,29 @@ static void User_Process(void)
 #endif
     BSP_LED_Toggle(LED2);
 
-    if (connected)
-    {
-      /* Set a random seed */
-      srand(HAL_GetTick());
-
-      /* Update emulated Environmental data */
-      Set_Random_Environmental_Values(&data_t, &data_p);
-      BlueMS_Environmental_Update((int32_t)(data_p *100), (int16_t)(data_t * 10));
-
-      /* Update emulated Acceleration, Gyroscope and Sensor Fusion data */
-      Set_Random_Motion_Values(counter);
-      Acc_Update(&x_axes, &g_axes, &m_axes);
-      Quat_Update(&q_axes);
-
-      counter ++;
-      if (counter == 40) {
-        counter = 0;
-        Reset_Motion_Values();
-      }
-#if !USE_BUTTON
-      HAL_Delay(1000); /* wait 1 sec before sending new data */
-#endif
-    }
+//    if (connected)
+//    {
+//      /* Set a random seed */
+//      srand(HAL_GetTick());
+//
+//      /* Update emulated Environmental data */
+//      Set_Random_Environmental_Values(&data_t, &data_p);
+//      BlueMS_Environmental_Update((int32_t)(data_p *100), (int16_t)(data_t * 10));
+//
+//      /* Update emulated Acceleration, Gyroscope and Sensor Fusion data */
+//      Set_Random_Motion_Values(counter);
+//      Acc_Update(&x_axes, &g_axes, &m_axes);
+//      Quat_Update(&q_axes);
+//
+//      counter ++;
+//      if (counter == 40) {
+//        counter = 0;
+//        Reset_Motion_Values();
+//      }
+//#if !USE_BUTTON
+//      HAL_Delay(1000); /* wait 1 sec before sending new data */
+//#endif
+//    }
 #if USE_BUTTON
     /* Reset the User Button flag */
     user_button_pressed = 0;
