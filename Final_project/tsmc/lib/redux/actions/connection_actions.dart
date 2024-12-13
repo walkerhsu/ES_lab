@@ -6,3 +6,8 @@ class UpdateConnectionStateAction {
 
   UpdateConnectionStateAction(this.connectionState, this.device);
 } 
+
+class UpdateShouldRemindAction {
+  final bool shouldRemind;
+  UpdateShouldRemindAction(this.shouldRemind);
+} 

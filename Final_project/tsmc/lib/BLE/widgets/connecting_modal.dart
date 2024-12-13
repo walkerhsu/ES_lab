@@ -20,13 +20,16 @@ class _ConnectingModalState extends State<ConnectingModal> {
     _connect();
   }
 
+  @override
+
   Future<void> _connect() async {
     try {
       await widget.device.connect();
       if (!mounted) return;
       
       // Update Redux state
-      StoreProvider.of<AppState>(context).dispatch(
+      final store = StoreProvider.of<AppState>(context);
+      store.dispatch(
         UpdateConnectionStateAction(
           BluetoothConnectionState.connected,
           widget.device

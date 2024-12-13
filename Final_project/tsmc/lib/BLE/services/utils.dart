@@ -22,3 +22,13 @@ void readServicesAndCharacteristics(BluetoothDevice device) async {
     }
   }
 }
+
+void subscribeToNotifications(BluetoothCharacteristic characteristic) async 
+{
+  await characteristic.setNotifyValue(true);
+}
+
+Stream<List<int>> getStreamFromCharacteristic(BluetoothCharacteristic characteristic) {
+  assert(characteristic.properties.notify, 'Characteristic is not a notification');
+  return characteristic.lastValueStream;
+}
