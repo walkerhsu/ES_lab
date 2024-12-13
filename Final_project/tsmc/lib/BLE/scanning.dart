@@ -22,7 +22,7 @@ class _ScanningState extends State<Scanning> {
       builder: (c, snapshot) {
         if (snapshot.data!) {
           return Scaffold(
-            appBar: const MyAppBar(),
+            appBar: const MyAppBar(showBackButton: false),
             body: const MyLoading(),
             floatingActionButton: FloatingActionButton(
               onPressed: () => FlutterBluePlus.stopScan(),
@@ -32,7 +32,7 @@ class _ScanningState extends State<Scanning> {
           );
         } else {
           return Scaffold(
-            appBar: const MyAppBar(),
+            appBar: const MyAppBar(showBackButton: false),
             body: const ScannedDevices(),
             floatingActionButton: FloatingActionButton(
               backgroundColor:const Color(0xFFEDEDED),

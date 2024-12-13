@@ -7,6 +7,10 @@ AppState appReducer(AppState state, dynamic action) {
       connectionState: action.connectionState,
       connectedDevice: action.device,
     );
+  } else if (action is UpdateShouldRemindAction) {
+    return state.copyWith(
+      shouldRemind: action.shouldRemind,
+    );
   }
   return state;
 } 
