@@ -1,8 +1,0 @@
-../BlueNRG_MS/App/gatt_db.c:79:12:Add_HWServW2ST_Service	64	static
-../BlueNRG_MS/App/gatt_db.c:148:12:Add_SWServW2ST_Service	64	static
-../BlueNRG_MS/App/gatt_db.c:187:12:Acc_Update	32	static
-../BlueNRG_MS/App/gatt_db.c:206:12:Remind_Update	24	static
-../BlueNRG_MS/App/gatt_db.c:229:12:Quat_Update	40	static
-../BlueNRG_MS/App/gatt_db.c:280:6:Read_Request_CB	88	static
-../BlueNRG_MS/App/gatt_db.c:306:6:Write_Request_CB	24	static
-../BlueNRG_MS/App/gatt_db.c:326:12:BlueMS_Environmental_Update	40	static

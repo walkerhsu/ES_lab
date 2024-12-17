@@ -23,6 +23,7 @@
 #include "gatt_db.h"
 #include "bluenrg_conf.h"
 #include "bluenrg_gatt_aci.h"
+#include "cmsis_os.h"
 
 /** @brief Macro that stores Value into a buffer in Little Endian Format (2 bytes)*/
 #define HOST_TO_LE_16(buf, val)    ( ((buf)[1] =  (uint8_t) (val)    ) , \
@@ -67,6 +68,7 @@ extern AxesRaw_t g_axes;
 extern AxesRaw_t m_axes;
 extern int waterintake;
 extern uint32_t RemindInterval;
+extern osSemaphoreId_t SemRemindHandle;
 
 extern uint16_t connection_handle;
 extern uint32_t start_time;
@@ -119,9 +121,9 @@ tBleStatus Add_HWServW2ST_Service(void)
   BLUENRG_memcpy(&char_uuid.Char_UUID_128, uuid, 16);
   ret =  aci_gatt_add_char(HWServW2STHandle, UUID_TYPE_128, char_uuid.Char_UUID_128,
                            2,
-                           CHAR_PROP_WRITE,
+                           CHAR_PROP_WRITE|CHAR_PROP_WRITE_WITHOUT_RESP,
                            ATTR_PERMISSION_NONE,
-                           GATT_NOTIFY_WRITE_REQ_AND_WAIT_FOR_APPL_RESP,
+						   GATT_NOTIFY_ATTRIBUTE_WRITE,
                            16, 0, &RemindIntervalHandle);
   if (ret != BLE_STATUS_SUCCESS)
     return BLE_STATUS_ERROR;
@@ -207,8 +209,8 @@ tBleStatus Remind_Update(void)
 {
 	uint8_t buff[2];
 	tBleStatus ret;
-	int reminder = 1;
-	HOST_TO_LE_16(buff, reminder);
+//	int reminder = 1;
+	HOST_TO_LE_16(buff, 0);
 
 	ret = aci_gatt_update_char_value(HWServW2STHandle, SendRemindHandle,
 					 0, 2, buff);
@@ -310,15 +312,16 @@ void Write_Request_CB(uint16_t handle, uint8_t* data)
 	{
 //		BSP_LED_Toggle(LED2);
 		uint32_t newRemindInterval = data[0] + (data[1] << 8);
-//		PRINTF("Data: %d\r\n", newDelayTime);
+		printf("New Delay time: %ld\r\n", newRemindInterval);
 		if (newRemindInterval > 0)
 		{
-			RemindInterval = newRemindInterval * 100;
-			PRINTF("Write request success!!! %d\r\n", RemindInterval);
+			RemindInterval = newRemindInterval * 60000;
+			osSemaphoreRelease(SemRemindHandle);
+			printf("Write request success!!! %ld mins\r\n", RemindInterval);
 		}
 		else
 		{
-			PRINTF("INVALID DATA VALUE!!!\r\n");
+			printf("INVALID DATA VALUE!!!\r\n");
 		}
 	}
 }
