@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -118,10 +119,23 @@ const osSemaphoreAttr_t SemRemind_attributes = {
   .cb_mem = &SemRemindControlBlock,
   .cb_size = sizeof(SemRemindControlBlock),
 };
+/* Definitions for SemDrinkDelay */
+osSemaphoreId_t SemDrinkDelayHandle;
+osStaticSemaphoreDef_t SemDrinkDelayControlBlock;
+const osSemaphoreAttr_t SemDrinkDelay_attributes = {
+  .name = "SemDrinkDelay",
+  .cb_mem = &SemDrinkDelayControlBlock,
+  .cb_size = sizeof(SemDrinkDelayControlBlock),
+};
 /* USER CODE BEGIN PV */
-int waterintake;
+float sampleDelay = 100;
+float waterintake;
+const int WINDOW_SIZE = 5;
 float pData[3];
 uint32_t RemindInterval = 500;
+float avg_angle;
+float ang_speed_threshold = 100;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -198,6 +212,9 @@ int main(void)
 
   /* creation of SemRemind */
   SemRemindHandle = osSemaphoreNew(1, 0, &SemRemind_attributes);
+
+  /* creation of SemDrinkDelay */
+  SemDrinkDelayHandle = osSemaphoreNew(1, 0, &SemDrinkDelay_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -702,7 +719,9 @@ void StartTaskDataTrans(void *argument)
   {
 	  osSemaphoreAcquire(SemDrinkActionHandle, osWaitForever);
 	  printf("start transfer data\r\n");
-	  Acc_Update(waterintake);
+	  Acc_Update((int)waterintake);
+	  printf("Water intake: %.2f\r\n", waterintake);
+	  waterintake = 0;
 	  osDelay(1);
   }
   /* USER CODE END 5 */
@@ -761,22 +780,130 @@ void StartTaskRemind(void *argument)
 void StartTaskGyro(void *argument)
 {
   /* USER CODE BEGIN StartTaskGyro */
-  waterintake = 100;
-  int counter = 0;
+  waterintake = 0;
+//  int counter = 0;
+
+  float prev_ang[WINDOW_SIZE];
+  float cur_ang_avg = 0;
+  int drink_alert = 0;
+  int is_drinking = 0;
+  int finish_drinking = 0;
+  int drink_alert_counter = 0;
+  int is_drinking_counter = 0;
+  int finish_counter = 0;
+
+  int i;
+  for (i=0;i<WINDOW_SIZE;i++){
+	  prev_ang[i] = 0;
+  }
+
   /* Infinite loop */
   for(;;)
   {
+	osSemaphoreAcquire(SemDrinkDelayHandle, sampleDelay);
 	BSP_GYRO_GetXYZ(pData);
-	printf("start printing gyro data\r\n");
-	printf("(%.2f, %.2f, %.2f)\r\n", pData[0]/1000, pData[1]/1000, pData[2]/1000);
+//	printf("start printing gyro data\r\n");
+	printf("(%.2f, %.2f, %.2f) %.0f %.2f\r\n" , pData[0]/1000, pData[1]/1000, pData[2]/1000, sampleDelay, cur_ang_avg);
 	//	  printf("%.2f\r\n", pData[1]/1000);
+
 	// Algorithm
-	counter += 1;
-	if(counter == 20){	// detect drink action
-	  osSemaphoreRelease(SemDrinkActionHandle);
-	  counter = 0;
+	float x = pData[0] / 1000, y = pData[1] / 1000, z = pData[2] / 1000;
+	float sampleRate = 1000 / sampleDelay;
+	float cur_ang = copysign(1.0, z) * sqrt(fmax(pow(y, 2) + pow(z, 2) - pow(x, 2) * 0.6, 0)) / sampleRate + prev_ang[0];
+
+	cur_ang_avg += (cur_ang - prev_ang[4])/WINDOW_SIZE;
+
+	for (i=WINDOW_SIZE - 1;i>0;i--){
+		prev_ang[i] = prev_ang[i-1];
 	}
-	osDelay(200);
+	prev_ang[0] = cur_ang;
+
+	float cur_w = copysign(1.0, z) * sqrt(pow(y, 2) + pow(z, 2));
+
+	// detect drinking signal
+	if (fabs(cur_w) > 50 && is_drinking == 0){
+		drink_alert = 1;
+		drink_alert_counter = 0;
+	}
+
+	// start drinking
+	if (drink_alert == 1){
+		drink_alert_counter += 1;
+		if (fabs(cur_ang_avg) > 60){
+			drink_alert = 0;
+			is_drinking = 1;
+			drink_alert_counter = 0;
+			sampleDelay = 20;
+		}
+	}
+
+	// remove drinking signal
+	if (drink_alert_counter > 2 * sampleRate && is_drinking == 0){
+		drink_alert = 0;
+		drink_alert_counter = 0;
+	}
+
+	// record drinking amount of water
+	if (is_drinking == 1){
+		int drink_rate;
+		if (fabs(cur_ang_avg) < 65){
+			drink_rate = 0;
+		} else if (fabs(cur_ang_avg) < 70){
+			drink_rate = 7;
+		} else if (fabs(cur_ang_avg) < 75){
+			drink_rate = 10;
+		} else if (fabs(cur_ang_avg) < 85){
+			drink_rate = 12;
+		} else if (fabs(cur_ang_avg) < 95){
+			drink_rate = 14;
+		} else if (fabs(cur_ang_avg) < 110){
+			drink_rate = 17;
+		} else if (fabs(cur_ang_avg) < 120){
+			drink_rate = 20;
+		} else {
+			drink_rate = 25;
+		}
+
+		waterintake += (1 / sampleRate) * drink_rate;
+//		printf("Cur angle: %.2f, Water intake: %.2f\r\n", cur_ang_avg, waterintake);
+
+		// dealing with drink-too-long event
+		is_drinking_counter += 1;
+		if (is_drinking_counter >= 10 * sampleRate){
+			is_drinking = 0;
+			is_drinking_counter = 0;
+			sampleDelay = 100;
+			waterintake = 0;
+		}
+	}
+
+	// detect finish signal
+	if (is_drinking == 1 && fabs(cur_ang_avg) < 55){
+		if (is_drinking_counter >= 0.8 * sampleRate && waterintake > 5){
+			finish_drinking = 1;
+			osSemaphoreRelease(SemDrinkActionHandle);
+		}
+		is_drinking = 0;
+		is_drinking_counter = 0;
+		sampleDelay = 100;
+	}
+
+	// correction for smoothing bottle angle
+	if (finish_drinking == 1){
+		finish_counter += 1;
+		if (finish_counter >= 1 * sampleRate){
+			finish_counter = 0;
+			finish_drinking = 0;
+		}
+	}
+
+	// clip abnormal events
+	if (drink_alert == 0 && is_drinking == 0 && finish_drinking == 0 && fabs(cur_ang_avg) > 15){
+		cur_ang = copysign(1.0, cur_ang) * 0;
+		cur_ang_avg += (cur_ang - prev_ang[0])/WINDOW_SIZE;
+		prev_ang[0] = cur_ang;
+	}
+//	osDelay(sampleDelay);
   }
   /* USER CODE END StartTaskGyro */
 }
