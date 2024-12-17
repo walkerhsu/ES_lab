@@ -1,2 +1,5 @@
 *.metadata
 .DS_Store
+.gitignore
+Final_project/Final/Debug/
+.vscode/

@@ -1,4 +1,0 @@
-C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.c:51:9:BSP_GYRO_Init	2
-C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.c:94:6:BSP_GYRO_DeInit	3
-C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.c:111:6:BSP_GYRO_LowPower	3
-C:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.1/Drivers/BSP/B-L475E-IOT01/stm32l475e_iot01_gyro.c:127:6:BSP_GYRO_GetXYZ	3
