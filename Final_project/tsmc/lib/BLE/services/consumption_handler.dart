@@ -13,7 +13,8 @@ class WaterConsumptionDisplay extends StatefulWidget {
   });
 
   @override
-  State<WaterConsumptionDisplay> createState() => _WaterConsumptionDisplayState();
+  State<WaterConsumptionDisplay> createState() =>
+      _WaterConsumptionDisplayState();
 }
 
 class _WaterConsumptionDisplayState extends State<WaterConsumptionDisplay> {
@@ -31,9 +32,11 @@ class _WaterConsumptionDisplayState extends State<WaterConsumptionDisplay> {
     // get the total water consumption from 00:00 today to now
     final now = DateTime.now();
     final start = DateTime(now.year, now.month, now.day);
-    final data = await DatabaseHelper.instance.getWaterConsumptionRange(start, now);
+    final data =
+        await DatabaseHelper.instance.getWaterConsumptionRange(start, now);
     mprint('data: $data');
-    totalWaterConsumption = data.fold(0, (sum, record) => sum + record['amount']);
+    totalWaterConsumption =
+        data.fold(0, (sum, record) => sum + record['amount']);
   }
 
   @override
@@ -42,10 +45,11 @@ class _WaterConsumptionDisplayState extends State<WaterConsumptionDisplay> {
       stream: getStreamFromCharacteristic(widget.characteristic),
       builder: (context, snapshot) {
         if (snapshot.hasData && snapshot.data!.isNotEmpty) {
-          final newValue = snapshot.data![1];
+          final newValue = (snapshot.data![0] * 256 + snapshot.data![1]);
           mprint("newValue: ${snapshot.data}");
+          mprint("newValue: $newValue");
           totalWaterConsumption += newValue;
-          lastProcessedValue = newValue;
+          mprint("totalWaterConsumption: $totalWaterConsumption");
           DatabaseHelper.instance.insertWaterConsumption(newValue);
         }
 

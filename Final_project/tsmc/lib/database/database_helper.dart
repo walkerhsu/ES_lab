@@ -38,7 +38,7 @@ class DatabaseHelper {
   Future<int> insertWaterConsumption(int amount) async {
     final db = await database;
     final timestamp = DateTime.now().millisecondsSinceEpoch;
-    
+
     return await db.insert(
       'water_consumption',
       {
@@ -72,4 +72,10 @@ class DatabaseHelper {
       orderBy: 'timestamp ASC',
     );
   }
-} 
+
+  // clear the whole database
+  Future<int> clearDatabase() async {
+    final db = await database;
+    return await db.delete('water_consumption');
+  }
+}

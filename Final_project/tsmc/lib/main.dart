@@ -6,7 +6,6 @@ import 'package:tsmc/redux/reducers/app_reducer.dart';
 import 'package:tsmc/BLE/ble_home_page.dart';
 import 'package:tsmc/theme.dart';
 
-
 void main() {
   final store = Store<AppState>(
     appReducer,
@@ -18,7 +17,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final Store<AppState> store;
-  
+
   const MyApp({super.key, required this.store});
 
   @override

@@ -9,6 +9,8 @@ import 'package:tsmc/BLE/widgets/set_time_interval.dart';
 import 'package:tsmc/BLE/services/history_handler.dart';
 import 'package:tsmc/BLE/services/consumption_handler.dart';
 import 'package:tsmc/BLE/services/reminder_handler.dart';
+import 'package:tsmc/BLE/widgets/reminder.dart';
+import 'package:tsmc/database/database_helper.dart';
 
 class WaterConsumptionPage extends StatefulWidget {
   const WaterConsumptionPage({super.key, required this.service});
@@ -22,6 +24,7 @@ class _WaterConsumptionPageState extends State<WaterConsumptionPage> {
   late BluetoothCharacteristic? consumptionCharacteristic;
   late BluetoothCharacteristic? timeIntervalCharacteristic;
   late BluetoothCharacteristic? reminderCharacteristic;
+  int interval = 0;
 
   @override
   void initState() {
@@ -64,6 +67,9 @@ class _WaterConsumptionPageState extends State<WaterConsumptionPage> {
         minutes
       ]; // Adjust byte conversion based on your protocol
       await timeIntervalCharacteristic!.write(value);
+      // setState(() {
+      //   interval = minutes;
+      // });
     }
   }
 
@@ -78,28 +84,43 @@ class _WaterConsumptionPageState extends State<WaterConsumptionPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        const SizedBox(height: 20),
-        if (consumptionCharacteristic != null)
-          WaterConsumptionDisplay(
-            characteristic: consumptionCharacteristic!,
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(height: 20),
+          if (consumptionCharacteristic != null)
+            WaterConsumptionDisplay(
+              characteristic: consumptionCharacteristic!,
+            ),
+          const SizedBox(height: 20),
+          const ShowHistory(),
+          const SizedBox(height: 20),
+          if (reminderCharacteristic != null)
+            ReminderHandler(
+              characteristic: reminderCharacteristic!,
+              writeCharacteristic: timeIntervalCharacteristic!,
+            ),
+          // ElevatedButton(
+          //     onPressed: DatabaseHelper.instance.clearDatabase,
+          //     child: const Text("test"))
+          StreamBuilder<List<int>>(
+            stream: getStreamFromCharacteristic(reminderCharacteristic!),
+            builder: (context, snapshot) {
+              if (snapshot.hasData && snapshot.data!.isNotEmpty) {
+                mprint('reminder handler: ${snapshot.data![1]}');
+                if (snapshot.data![1] == 0) {
+                  return Reminder(
+                    key: UniqueKey(),
+                  );
+                }
+              }
+              return const SizedBox.shrink();
+            },
           ),
-        const SizedBox(height: 20),
-        const ShowHistory(),
-        const SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: _showSetTimeIntervalModal,
-          child: const Text('Set Reminder Interval'),
-        ),
-        const SizedBox(height: 20),
-        if (reminderCharacteristic != null)
-          ReminderHandler(
-            characteristic: reminderCharacteristic!,
-          ),
-      ],
+        ],
+      ),
     );
   }
 }
