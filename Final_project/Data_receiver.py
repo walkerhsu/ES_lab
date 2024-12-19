@@ -9,4 +9,5 @@ with open(output_file, 'w') as file:
         data = ser.readline().decode('utf-8')  # Read a line from STM32
         if data:
             print(data.strip())  # Display on console
-            file.write(data.strip() + "\n")    # Write to file
+            if data[0] == '(':
+                file.write(data.strip() + "\n")    # Write to file

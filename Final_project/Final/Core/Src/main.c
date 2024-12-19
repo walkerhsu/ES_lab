@@ -128,13 +128,13 @@ const osSemaphoreAttr_t SemDrinkDelay_attributes = {
   .cb_size = sizeof(SemDrinkDelayControlBlock),
 };
 /* USER CODE BEGIN PV */
+float smallcal = 0.9;
+float largecal = 1.1;
 float sampleDelay = 100;
 float waterintake;
 const int WINDOW_SIZE = 5;
 float pData[3];
-uint32_t RemindInterval = 10000;
-float avg_angle;
-float ang_speed_threshold = 100;
+uint32_t RemindInterval = 1200000;
 
 /* USER CODE END PV */
 
@@ -719,8 +719,8 @@ void StartTaskDataTrans(void *argument)
   {
 	  osSemaphoreAcquire(SemDrinkActionHandle, osWaitForever);
 	  printf("start transfer data\r\n");
-	  Acc_Update((int)waterintake);
-	  printf("Water intake: %.2f\r\n", waterintake);
+	  Acc_Update((int)round(waterintake));
+	  printf("Water intake: %.2f %d\r\n", waterintake, (int)round(waterintake));
 	  waterintake = 0;
 	  osDelay(1);
   }
@@ -761,6 +761,7 @@ void StartTaskRemind(void *argument)
   for(;;)
   {
 	status = osSemaphoreAcquire(SemRemindHandle, RemindInterval);
+	printf("Status: %x\r\nOSError: %x\r\n", status, osErrorTimeout);
 	if(status == osErrorTimeout)
 	{
 		printf("Send Remind\r\n");
@@ -804,7 +805,7 @@ void StartTaskGyro(void *argument)
     osSemaphoreAcquire(SemDrinkDelayHandle, sampleDelay);
     BSP_GYRO_GetXYZ(pData);
     //	printf("start printing gyro data\r\n");
-    printf("(%.2f, %.2f, %.2f) %.0f %.2f\r\n" , pData[0]/1000, pData[1]/1000, pData[2]/1000, sampleDelay, cur_ang_avg);
+    printf("(%.2f, %.2f, %.2f, %.0f, %.2f)\r\n" , pData[0]/1000, pData[1]/1000, pData[2]/1000, sampleDelay, cur_ang_avg);
     //	  printf("%.2f\r\n", pData[1]/1000);
 
     // Algorithm
@@ -822,7 +823,7 @@ void StartTaskGyro(void *argument)
     float cur_w = copysign(1.0, z) * sqrt(pow(y, 2) + pow(z, 2));
 
     // detect drinking signal
-    if (fabs(cur_w) > 50 && is_drinking == 0){
+    if (fabs(cur_w) > 50 && is_drinking == 0 && finish_drinking == 0){
       drink_alert = 1;
       drink_alert_counter = 0;
     }
@@ -846,24 +847,26 @@ void StartTaskGyro(void *argument)
 
     // record drinking amount of water
     if (is_drinking == 1){
-      int drink_rate;
-      if (fabs(cur_ang_avg) < 65){
-        drink_rate = 0;
-      } else if (fabs(cur_ang_avg) < 70){
-        drink_rate = 7;
-      } else if (fabs(cur_ang_avg) < 75){
-        drink_rate = 10;
-      } else if (fabs(cur_ang_avg) < 85){
-        drink_rate = 12;
-      } else if (fabs(cur_ang_avg) < 95){
-        drink_rate = 14;
-      } else if (fabs(cur_ang_avg) < 110){
-        drink_rate = 17;
-      } else if (fabs(cur_ang_avg) < 120){
-        drink_rate = 20;
-      } else {
-        drink_rate = 25;
-      }
+		float drink_rate;
+		if (fabs(cur_ang_avg) < 65){
+			drink_rate = 0;
+		} else if (fabs(cur_ang_avg) < 70){
+			drink_rate = 3 * smallcal;
+		} else if (fabs(cur_ang_avg) < 75){
+			drink_rate = 6 * smallcal;
+		} else if (fabs(cur_ang_avg) < 80){
+			drink_rate = 8 * smallcal;
+		} else if (fabs(cur_ang_avg) < 100){
+			drink_rate = 12 * smallcal;
+		} else if (fabs(cur_ang_avg) < 110){
+			drink_rate = 15 * smallcal;
+		} else if (fabs(cur_ang_avg) < 120){
+			drink_rate = 18 * largecal;
+		} else if (fabs(cur_ang_avg) < 130){
+			drink_rate = 23 * largecal;
+		} else {
+			drink_rate = 30 * largecal;
+		}
 
       waterintake += (1 / sampleRate) * drink_rate;
       // printf("Cur angle: %.2f, Water intake: %.2f\r\n", cur_ang_avg, waterintake);
@@ -882,6 +885,7 @@ void StartTaskGyro(void *argument)
     if (is_drinking == 1 && fabs(cur_ang_avg) < 55){
       if (is_drinking_counter >= 0.8 * sampleRate && waterintake > 5){
         finish_drinking = 1;
+        osSemaphoreRelease(SemRemindHandle);
         osSemaphoreRelease(SemDrinkActionHandle);
       }
       is_drinking = 0;
@@ -899,7 +903,7 @@ void StartTaskGyro(void *argument)
     }
 
     // clip abnormal events
-    if (drink_alert == 0 && is_drinking == 0 && finish_drinking == 0 && fabs(cur_ang_avg) > 15){
+    if (drink_alert == 0 && is_drinking == 0 && finish_drinking == 0 && fabs(cur_ang_avg) > 12){
       cur_ang = copysign(1.0, cur_ang) * 0;
       cur_ang_avg += (cur_ang - prev_ang[0])/WINDOW_SIZE;
       prev_ang[0] = cur_ang;
